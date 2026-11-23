@@ -1,0 +1,66 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- assign gb_img = section.settings.imagem | default: section.settings.imagem_reserva -%}
+{%- if section.settings.estilo == 'faixa' -%}
+  <section class="gb-root gb-ophir gb-ophir--faixa" data-gb-secao="ophir">
+    {%- if gb_img != blank -%}
+      <div class="gb-ph">
+        {%- render 'gb-imagem', imagem: gb_img, alt: section.settings.alt, carga: 'lazy', sizes: '(min-width: 760px) 50vw, 100vw' -%}
+      </div>
+    {%- endif -%}
+    <div class="gb-ophir-txt">
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-txt">{{ section.settings.texto | escape }}</p>{%- endif -%}
+      {%- if section.settings.link_texto != blank -%}
+        <a href="{{ section.settings.link_url | default: '#' }}" class="gb-link">{{ section.settings.link_texto | escape }}</a>
+      {%- endif -%}
+    </div>
+  </section>
+{%- else -%}
+  <section class="gb-root gb-ophir gb-ophir--citacao" data-gb-secao="ophir">
+    <div class="gb-in">
+      {%- if gb_img != blank -%}
+        <div class="gb-ph">
+          {%- render 'gb-imagem', imagem: gb_img, alt: section.settings.alt, carga: 'lazy', widths: '200, 400', sizes: '200px' -%}
+        </div>
+      {%- endif -%}
+      <div>
+        <span class="gb-fio-bloco" aria-hidden="true"></span>
+        <blockquote>{{ section.settings.citacao | escape }}</blockquote>
+        {%- if section.settings.link_texto != blank -%}
+          <a href="{{ section.settings.link_url | default: '#' }}" class="gb-link">{{ section.settings.link_texto | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Ofirelle: Ophir",
+  "tag": "div",
+  "class": "gb-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "estilo",
+      "label": "Estilo",
+      "options": [
+        { "value": "faixa", "label": "Faixa azul (home)" },
+        { "value": "citacao", "label": "Citação curta (produto)" }
+      ],
+      "default": "faixa"
+    },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título (faixa)", "default": "Named after <em>the land of gold.</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto (faixa)", "default": "In the Bible, Ophir was the land of gold that Solomon's ships sailed for. We carry its name as a promise: pieces that feel precious, worn every day, given with love." },
+    { "type": "text", "id": "citacao", "label": "Frase (citação)", "default": "Named after Ophir, the land of gold in the Bible." },
+    { "type": "text", "id": "link_texto", "label": "Link: texto", "default": "Read our story" },
+    { "type": "url", "id": "link_url", "label": "Link: destino" },
+    { "type": "image_picker", "id": "imagem", "label": "Foto" },
+    { "type": "image_picker", "id": "imagem_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+    { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Gold cross medallion necklace resting on stone beside an olive branch" },
+    { "type": "paragraph", "content": "A foto de pedra e ramo de oliveira ainda não existe. Enquanto a foto acima estiver vazia, aparece a foto reserva." }
+  ],
+  "presets": [{ "name": "Ofirelle: Ophir" }]
+}
+{% endschema %}

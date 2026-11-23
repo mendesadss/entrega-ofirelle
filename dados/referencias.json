@@ -1,0 +1,570 @@
+{
+  "fonte": "Banco de Oportunidades V6, index.json local (só leitura)",
+  "banco_asOf": "2026-11-15",
+  "criterio": "loja com produto do termo no catálogo (e do público, se pedido), com 10000 visitas/mês ou mais; ordem por (log10(visitas) + 0,5 x log10(1 + anúncios ativos)) x (0,5 + parte do catálogo que é do produto)",
+  "limite": "Tráfego é estimativa mensal do Similarweb e anúncio ativo é sinal de investimento. Nenhum dos dois prova venda.",
+  "filtros": {
+    "termos": [
+      "cross necklace",
+      "cross pendant",
+      "faith necklace"
+    ],
+    "nicho": null,
+    "pais": null,
+    "sem": [],
+    "publico": [],
+    "excluir": [
+      "ofirelle.com"
+    ],
+    "max": 10,
+    "minVisitas": 10000
+  },
+  "total_candidatas": 131,
+  "escolhidas": [
+    {
+      "dominio": "lainly.com",
+      "nicho": "Religiosos e cristãos",
+      "subnicho": "Joias e acessórios cristãos",
+      "pais": "US",
+      "visitas_mes": 87733,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 800,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Birthstone Cross Necklace",
+          "preco": 39.99,
+          "moeda": "USD",
+          "url": "https://lainly.com/products/birthstone-cross-necklace"
+        },
+        {
+          "titulo": "Two Tone Cross Necklace",
+          "preco": 39.99,
+          "moeda": "USD",
+          "url": "https://lainly.com/products/two-tone-cross-necklace"
+        },
+        {
+          "titulo": "Twisted Cross Necklace",
+          "preco": 39.99,
+          "moeda": "USD",
+          "url": "https://lainly.com/products/twisted-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/lainly.com/home-01e88e3ac9d8.jpg",
+      "print_produto_mobile": "store-evidence/lainly.com/product-ca5f316e5d1e.jpg",
+      "print_data": "2026-10-28T17:10:30.688Z",
+      "pontos": 6.39
+    },
+    {
+      "dominio": "houseofcarats.co.uk",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "GB",
+      "visitas_mes": 97907,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 76,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Gothic Cross Necklace Set Gold",
+          "preco": 91.08,
+          "moeda": "GBP",
+          "url": "https://houseofcarats.co.uk/products/gothic-cross-necklace-bundle-gold"
+        },
+        {
+          "titulo": "Cathedral Cross Necklace",
+          "preco": 146.28,
+          "moeda": "GBP",
+          "url": "https://houseofcarats.co.uk/products/cathedral-cross-necklace"
+        },
+        {
+          "titulo": "Rosalia Cross Necklace",
+          "preco": 78.2,
+          "moeda": "GBP",
+          "url": "https://houseofcarats.co.uk/products/rosalia-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/houseofcarats.co.uk/home-032b7c6dc07d.jpg",
+      "print_produto_mobile": "store-evidence/houseofcarats.co.uk/product-ec9c250f1654.jpg",
+      "print_data": "2026-10-28T17:43:19.949Z",
+      "pontos": 5.93
+    },
+    {
+      "dominio": "atoleajewelry.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": null,
+      "visitas_mes": 2247177,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 1205,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 12,
+      "foco_pct": 25,
+      "exemplos": [
+        {
+          "titulo": "Sparkling Cross Necklace",
+          "preco": 51.95,
+          "moeda": "EUR",
+          "url": "https://atoleajewelry.com/products/zircon-cross-necklace"
+        },
+        {
+          "titulo": "Mother of Pearl Cross Necklace",
+          "preco": 57.95,
+          "moeda": "EUR",
+          "url": "https://atoleajewelry.com/products/mother-of-pearl-cross-necklace"
+        },
+        {
+          "titulo": "Cross Necklace",
+          "preco": 47.95,
+          "moeda": "EUR",
+          "url": "https://atoleajewelry.com/products/cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/atoleajewelry.com/home-257316fc3b6a.jpg",
+      "print_produto_mobile": "store-evidence/atoleajewelry.com/product-ac96e47eb409.jpg",
+      "print_data": "2026-10-29T23:09:12.198Z",
+      "pontos": 5.92
+    },
+    {
+      "dominio": "cutethingscommin.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "US",
+      "visitas_mes": 112394,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 52,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Stainless Steel Diamond Starlight Cross Necklace",
+          "preco": 24.99,
+          "moeda": "USD",
+          "url": "https://cutethingscommin.com/products/stainless-steel-diamond-starlight-cross-necklace"
+        },
+        {
+          "titulo": "18K Gold Stainless Steel Diamond Starlight Cross Necklace",
+          "preco": 24.99,
+          "moeda": "USD",
+          "url": "https://cutethingscommin.com/products/18k-gold-stainless-steel-diamond-starlight-cross-necklace"
+        },
+        {
+          "titulo": "18K Real Gold Plated Dual Cross Necklace",
+          "preco": 22.99,
+          "moeda": "USD",
+          "url": "https://cutethingscommin.com/products/18k-real-gold-plated-dual-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/cutethingscommin.com/home-1ede321f715c.jpg",
+      "print_produto_mobile": "store-evidence/cutethingscommin.com/product-c9c6bec920af.jpg",
+      "print_data": "2026-10-30T13:55:04.449Z",
+      "pontos": 5.91
+    },
+    {
+      "dominio": "melindamaria.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "US",
+      "visitas_mes": 644023,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 0,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "\"Oh She Fancy\" Cross Pendant - Gold|White Diamondettes",
+          "preco": 85,
+          "moeda": "USD",
+          "url": "https://melindamaria.com/products/oh-she-fancy-cross-pendant-15-gold"
+        },
+        {
+          "titulo": "\"Oh She Fancy\" Cross Pendant - Silver|Blue Opal",
+          "preco": 95,
+          "moeda": "USD",
+          "url": "https://melindamaria.com/products/oh-she-fancy-blue-opal-cross-pendant-18-silver-blue-opal"
+        },
+        {
+          "titulo": "\"Oh She Fancy\" Cross Pendant - Gold|Blue Opal",
+          "preco": 95,
+          "moeda": "USD",
+          "url": "https://melindamaria.com/products/oh-she-fancy-blue-opal-cross-pendant-18-gold-blue-opal"
+        }
+      ],
+      "print_home_mobile": "store-evidence/melindamaria.com/home-ee189cf789f8.jpg",
+      "print_produto_mobile": "store-evidence/melindamaria.com/product-9e4b2f8487c6.jpg",
+      "print_data": "2026-11-01T10:34:21.658Z",
+      "pontos": 5.81
+    },
+    {
+      "dominio": "enroutejewelry.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "US",
+      "visitas_mes": 1018242,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 912,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 11,
+      "foco_pct": 27,
+      "exemplos": [
+        {
+          "titulo": "Wild Rose Layered Cross Necklace in Two-Tone",
+          "preco": 46,
+          "moeda": "USD",
+          "url": "https://enroutejewelry.com/products/wild-rose-layered-cross-necklace-in-two-tone"
+        },
+        {
+          "titulo": "Pavé Cross Necklace",
+          "preco": 28,
+          "moeda": "USD",
+          "url": "https://enroutejewelry.com/products/pave-cross-necklace"
+        },
+        {
+          "titulo": "Icon Cross Necklace in Gold",
+          "preco": 38,
+          "moeda": "USD",
+          "url": "https://enroutejewelry.com/products/icon-cross-necklace-in-gold"
+        }
+      ],
+      "print_home_mobile": "store-evidence/enroutejewelry.com/home-d39f72247828.jpg",
+      "print_produto_mobile": "store-evidence/enroutejewelry.com/product-5f3ab40db531.jpg",
+      "print_data": "2026-10-28T16:53:41.541Z",
+      "pontos": 5.79
+    },
+    {
+      "dominio": "mayahenryjewelers.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "US",
+      "visitas_mes": 515931,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 271,
+      "anuncios_data": "2026-11-14",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 9,
+      "foco_pct": 33,
+      "exemplos": [
+        {
+          "titulo": "Bezel Cross Necklace | White Gold",
+          "preco": 34.95,
+          "moeda": "USD",
+          "url": "https://mayahenryjewelers.com/products/bezel-cross-necklace-white-gold"
+        },
+        {
+          "titulo": "Eternal Cross Pendant Necklace | Gold",
+          "preco": 34.95,
+          "moeda": "USD",
+          "url": "https://mayahenryjewelers.com/products/eternal-cross-pendant-necklace-gold"
+        },
+        {
+          "titulo": "Eternal Cross Pendant Necklace | White Gold",
+          "preco": 34.95,
+          "moeda": "USD",
+          "url": "https://mayahenryjewelers.com/products/eternal-cross-pendant-necklace-white-gold"
+        }
+      ],
+      "print_home_mobile": "store-evidence/mayahenryjewelers.com/home-ea0a97631290.jpg",
+      "print_produto_mobile": "store-evidence/mayahenryjewelers.com/product-ce33e14ec1ba.jpg",
+      "print_data": "2026-10-28T17:37:14.767Z",
+      "pontos": 5.77
+    },
+    {
+      "dominio": "humbler.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias e acessórios",
+      "pais": "US",
+      "visitas_mes": 44681,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 88,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Deus Vult Cross Pendant",
+          "preco": 85,
+          "moeda": null,
+          "url": "https://humbler.com/products/deus-vult-double-sided-pendant-copy"
+        },
+        {
+          "titulo": "Rose Cross Pendant",
+          "preco": 65,
+          "moeda": null,
+          "url": "https://humbler.com/products/rose-cross-pendant-gold"
+        },
+        {
+          "titulo": "Essential Cross Pendant",
+          "preco": 65,
+          "moeda": null,
+          "url": "https://humbler.com/products/essential-cross-pendant-copy"
+        }
+      ],
+      "print_home_mobile": "store-evidence/humbler.com/home-d352deb6cb983ebe5885ebb779f14690caef247157b263a9f97e5ab0c8cbe4b3.jpg",
+      "print_produto_mobile": "store-evidence/humbler.com/product-e8bea7333a34949575a383a654841f7fda97cef1b74a1a7a9065d5f9c171296a.jpg",
+      "print_data": "2026-11-03T11:24:30.481Z",
+      "pontos": 5.62
+    },
+    {
+      "dominio": "sundayandstone.com",
+      "nicho": "Religiosos e cristãos",
+      "subnicho": "Joias e acessórios cristãos",
+      "pais": "US",
+      "visitas_mes": 43983,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 81,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Enamel Cross Necklace",
+          "preco": 49.99,
+          "moeda": "USD",
+          "url": "https://sundayandstone.com/products/cross-enamel-necklace"
+        },
+        {
+          "titulo": "Russian Orthodox Cross Necklace",
+          "preco": 49.99,
+          "moeda": "USD",
+          "url": "https://sundayandstone.com/products/russian-orthodox-cross-necklace"
+        },
+        {
+          "titulo": "Patriotic American Flag Cross Necklace",
+          "preco": 48.99,
+          "moeda": "USD",
+          "url": "https://sundayandstone.com/products/patriotic-american-flag-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/sundayandstone.com/home-92ed9917f771.jpg",
+      "print_produto_mobile": "store-evidence/sundayandstone.com/product-4f904c4eb389.jpg",
+      "print_data": "2026-10-28T17:41:11.920Z",
+      "pontos": 5.6
+    },
+    {
+      "dominio": "hoperings.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias para presente",
+      "pais": "US",
+      "visitas_mes": 450552,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 2738,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 2,
+      "produtos_amostrados": 8,
+      "foco_pct": 25,
+      "exemplos": [
+        {
+          "titulo": "Straighten Your Crown Cross Necklace",
+          "preco": 39.99,
+          "moeda": "USD",
+          "url": "https://hoperings.com/products/cross-crown-necklace"
+        },
+        {
+          "titulo": "Men's Cross Necklace",
+          "preco": 39.99,
+          "moeda": "USD",
+          "url": "https://hoperings.com/products/mens-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/hoperings.com/home-f2a22dd59b46.jpg",
+      "print_produto_mobile": "store-evidence/hoperings.com/product-692120bb8f2e.jpg",
+      "print_data": "2026-10-29T20:40:40.494Z",
+      "pontos": 5.53
+    }
+  ],
+  "reservas": [
+    {
+      "dominio": "lunavere.com",
+      "nicho": "Religiosos e cristãos",
+      "subnicho": "Joias e acessórios cristãos",
+      "pais": "US",
+      "visitas_mes": 17518,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 180,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Surrounding Cross Pendant Necklace",
+          "preco": 55,
+          "moeda": "USD",
+          "url": "https://lunavere.com/products/surrounding-cross-pendant-necklace"
+        },
+        {
+          "titulo": "Triple Layer Cross Necklace",
+          "preco": 80,
+          "moeda": "USD",
+          "url": "https://lunavere.com/products/triple-layer-cross-necklace"
+        },
+        {
+          "titulo": "Classic Cross Necklace",
+          "preco": 50,
+          "moeda": "USD",
+          "url": "https://lunavere.com/products/classic-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/lunavere.com/home-4c92f5640d64.jpg",
+      "print_produto_mobile": "store-evidence/lunavere.com/product-55973ae0417b.jpg",
+      "print_data": "2026-10-28T17:15:21.641Z",
+      "pontos": 5.37
+    },
+    {
+      "dominio": "bentior.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "FR",
+      "visitas_mes": 61660,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 87,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 7,
+      "foco_pct": 43,
+      "exemplos": [
+        {
+          "titulo": "Paperclip Cross Necklace",
+          "preco": 69,
+          "moeda": "USD",
+          "url": "https://bentior.com/products/paperclip-cross-necklace"
+        },
+        {
+          "titulo": "Vintage Cross Necklace",
+          "preco": 59,
+          "moeda": "USD",
+          "url": "https://bentior.com/products/vintage-cross-necklace"
+        },
+        {
+          "titulo": "Grace Cross Necklace",
+          "preco": 119,
+          "moeda": "USD",
+          "url": "https://bentior.com/products/grace-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/bentior.com/home-efde026df2b9.jpg",
+      "print_produto_mobile": "store-evidence/bentior.com/product-1952b02be348.jpg",
+      "print_data": "2026-10-30T12:32:46.383Z",
+      "pontos": 5.35
+    },
+    {
+      "dominio": "theswaf.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "US",
+      "visitas_mes": 48894,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 16,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 6,
+      "foco_pct": 50,
+      "exemplos": [
+        {
+          "titulo": "Ruby Accent Cross Necklace",
+          "preco": 105,
+          "moeda": "USD",
+          "url": "https://theswaf.com/products/ruby-accent-cross-necklace"
+        },
+        {
+          "titulo": "Compass Arrow Cross Necklace",
+          "preco": 105,
+          "moeda": "USD",
+          "url": "https://theswaf.com/products/compass-arrow-cross-necklace"
+        },
+        {
+          "titulo": "Wind-Swept Cross Necklace",
+          "preco": 105,
+          "moeda": "USD",
+          "url": "https://theswaf.com/products/wind-swept-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/theswaf.com/home-8b6314c3f062.jpg",
+      "print_produto_mobile": "store-evidence/theswaf.com/product-bbed460ee695.jpg",
+      "print_data": "2026-10-30T15:17:36.722Z",
+      "pontos": 5.3
+    },
+    {
+      "dominio": "avariajewelry.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "US",
+      "visitas_mes": 72104,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 232,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 3,
+      "produtos_amostrados": 8,
+      "foco_pct": 38,
+      "exemplos": [
+        {
+          "titulo": "Lucienne Crown Cross Necklace & Earrings",
+          "preco": 42,
+          "moeda": "USD",
+          "url": "https://avariajewelry.com/products/lucienne-crown-cross-necklace-earrings"
+        },
+        {
+          "titulo": "Wynter Diamond Cross Necklace",
+          "preco": 58,
+          "moeda": "USD",
+          "url": "https://avariajewelry.com/products/wynter-diamond-cross-necklace"
+        },
+        {
+          "titulo": "Evangelina Diamond Cross Necklace",
+          "preco": 49,
+          "moeda": "USD",
+          "url": "https://avariajewelry.com/products/evangelina-diamond-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/avariajewelry.com/home-028beeb1af7b.jpg",
+      "print_produto_mobile": "store-evidence/avariajewelry.com/product-edeae3372ab7.jpg",
+      "print_data": "2026-10-30T22:35:34.916Z",
+      "pontos": 5.29
+    },
+    {
+      "dominio": "eleanorjewelry.com",
+      "nicho": "Joias e acessórios",
+      "subnicho": "Joias femininas",
+      "pais": "ID",
+      "visitas_mes": 43140,
+      "visitas_ref": "2026-10",
+      "anuncios_ativos": 149,
+      "anuncios_data": "2026-11-15",
+      "produtos_do_termo": 2,
+      "produtos_amostrados": 5,
+      "foco_pct": 40,
+      "exemplos": [
+        {
+          "titulo": "ELISE CROSS NECKLACE",
+          "preco": 48,
+          "moeda": "USD",
+          "url": "https://eleanorjewelry.com/products/elise-cross-necklace"
+        },
+        {
+          "titulo": "LUMIÈRE CROSS NECKLACE",
+          "preco": 46,
+          "moeda": "USD",
+          "url": "https://eleanorjewelry.com/products/lumiere-cross-necklace"
+        }
+      ],
+      "print_home_mobile": "store-evidence/eleanorjewelry.com/home-8286c9a919f2.jpg",
+      "print_produto_mobile": "store-evidence/eleanorjewelry.com/product-ab86c8a63732.jpg",
+      "print_data": "2026-10-28T17:42:35.987Z",
+      "pontos": 5.15
+    }
+  ]
+}

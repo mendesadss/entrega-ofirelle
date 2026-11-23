@@ -1,0 +1,46 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.mostrar or request.design_mode -%}
+<section class="gb-root gb-avaliacoes" id="reviews" data-gb-secao="avaliacoes">
+  {%- if section.settings.mostrar == false -%}
+    <p class="gb-muted" style="text-align:center">Seção desligada: marque "Mostrar avaliações" para ela aparecer na loja.</p>
+  {%- endif -%}
+  <div class="gb-in">
+    {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+    {%- assign gb_tem_app = false -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == '@app' -%}
+        {%- assign gb_tem_app = true -%}
+        {% render block %}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- unless gb_tem_app -%}
+      <h2>{{ section.settings.titulo | escape }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-muted">{{ section.settings.texto | escape }}</p>{%- endif -%}
+      {%- if section.settings.botao_texto != blank -%}
+        <a href="{{ section.settings.botao_url | default: '#review' }}" class="gb-btn gb-btn-s">{{ section.settings.botao_texto | escape }}</a>
+      {%- endif -%}
+    {%- endunless -%}
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Ofirelle: avaliações",
+  "tag": "div",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "checkbox", "id": "mostrar", "label": "Mostrar avaliações", "default": false },
+    { "type": "paragraph", "content": "Desligada, a seção não aparece na loja. Ligue só quando houver avaliações reais ou um app de avaliações instalado (adicione o app como bloco)." },
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Reviews" },
+    { "type": "text", "id": "titulo", "label": "Título (sem app)", "default": "No reviews yet." },
+    { "type": "text", "id": "texto", "label": "Texto (sem app)", "default": "If you wear one, tell us how." },
+    { "type": "text", "id": "botao_texto", "label": "Botão: texto", "default": "Write a review" },
+    { "type": "url", "id": "botao_url", "label": "Botão: destino" }
+  ],
+  "blocks": [{ "type": "@app" }],
+  "presets": [{ "name": "Ofirelle: avaliações" }]
+}
+{% endschema %}

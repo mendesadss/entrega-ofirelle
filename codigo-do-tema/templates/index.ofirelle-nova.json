@@ -1,0 +1,330 @@
+{
+  "sections": {
+    "hero": {
+      "type": "gb-hero",
+      "settings": {
+        "imagem": "shopify://shop_images/petite-puffed-cross-necklace-2.jpg",
+        "botao_1_url": "/products/petite-puffed-cross-necklace",
+        "botao_2_url": "#faith-set"
+      }
+    },
+    "mais_vendidos": {
+      "type": "gb-mais-vendidos",
+      "blocks": {
+        "b1": {
+          "type": "produto",
+          "settings": {
+            "produto": "petite-puffed-cross-necklace",
+            "imagem": "shopify://shop_images/petite-puffed-cross-necklace-2.jpg"
+          }
+        },
+        "b2": {
+          "type": "produto",
+          "settings": {
+            "produto": "asymmetric-cross-necklace",
+            "imagem": "shopify://shop_images/asymmetric-cross-necklace-1.png"
+          }
+        },
+        "b3": {
+          "type": "produto",
+          "settings": {
+            "produto": "enamel-cross-pendant-necklace",
+            "imagem": "shopify://shop_images/enamel-cross-pendant-necklace-1.png"
+          }
+        },
+        "b4": {
+          "type": "produto",
+          "settings": {
+            "produto": "sideways-cross-crystal-necklace",
+            "imagem": "shopify://shop_images/sideways-cross-crystal-necklace-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "link_url": "/collections/necklaces"
+      }
+    },
+    "ocasioes": {
+      "type": "gb-ocasioes",
+      "blocks": {
+        "b1": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Baptism and First Communion",
+            "url": "/collections/gifts?filter.p.tag=baptism",
+            "imagem": "shopify://shop_images/enamel-cross-pendant-necklace-2.jpg",
+            "imagem_reserva": "",
+            "alt": "Enamel Cross Medallion Necklace worn with a ribbed top"
+          }
+        },
+        "b2": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Confirmation",
+            "url": "/collections/gifts?filter.p.tag=confirmation",
+            "imagem": "shopify://shop_images/dove-cross-necklace-2.png",
+            "imagem_reserva": "",
+            "alt": "Dove Cross Necklace worn with a cream camisole"
+          }
+        },
+        "b3": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "For Mom",
+            "url": "/collections/gifts?filter.p.tag=mom",
+            "imagem": "shopify://shop_images/layered-cross-crystal-necklace-2.png",
+            "imagem_reserva": "",
+            "alt": "Layered Cross Necklace with Crystal worn in two layers"
+          }
+        },
+        "b4": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Christmas",
+            "url": "/collections/gifts?filter.p.tag=christmas",
+            "imagem": "",
+            "imagem_reserva": "shopify://shop_images/sideways-cross-crystal-necklace-2.jpg",
+            "alt": "Sideways Cross Necklace with Crystal worn with a satin camisole"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {}
+    },
+    "como_funciona": {
+      "type": "gb-como-funciona",
+      "blocks": {
+        "b1": {
+          "type": "passo",
+          "settings": {
+            "imagem": "shopify://shop_images/petite-puffed-cross-necklace-2.jpg",
+            "alt": "Petite Puffed Cross Necklace worn close to the neck"
+          }
+        },
+        "b2": {
+          "type": "passo",
+          "settings": {
+            "imagem": "shopify://shop_images/dove-cross-necklace-2.png",
+            "alt": "Dove Cross Necklace worn with a cream camisole"
+          }
+        },
+        "b3": {
+          "type": "passo",
+          "settings": {
+            "imagem": "shopify://shop_images/enamel-cross-pendant-necklace-2.jpg",
+            "alt": "Enamel Cross Medallion Necklace worn with a ribbed top"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "produto": "petite-puffed-cross-necklace",
+        "botao_url": "/collections/necklaces"
+      }
+    },
+    "camadas_prontas": {
+      "type": "gb-camadas-prontas",
+      "blocks": {
+        "b1": {
+          "type": "conjunto",
+          "settings": {
+            "nome": "The Everyday Grace Set",
+            "descricao": "Petite Puffed Cross, Sideways Cross with Crystal, Infinity Cross",
+            "peca_1": "petite-puffed-cross-necklace",
+            "peca_2": "sideways-cross-crystal-necklace",
+            "peca_3": "infinity-cross-necklace",
+            "imagem": "",
+            "imagem_reserva": "shopify://shop_images/layered-cross-crystal-necklace-2.png",
+            "alt": "Layered Cross Necklace with Crystal worn in two layers"
+          }
+        },
+        "b2": {
+          "type": "conjunto",
+          "settings": {
+            "nome": "The Blessing Set",
+            "descricao": "Enamel Cross Medallion, Dove Cross, Double Cross",
+            "peca_1": "enamel-cross-pendant-necklace",
+            "peca_2": "dove-cross-necklace",
+            "peca_3": "double-cross-necklace",
+            "imagem": "",
+            "imagem_reserva": "shopify://shop_images/double-cross-necklace-2.jpg",
+            "alt": "Double Cross Necklace worn at the neck"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {}
+    },
+    "todo_dia": {
+      "type": "gb-todo-dia",
+      "blocks": {
+        "b1": {
+          "type": "foto",
+          "settings": {
+            "imagem": "",
+            "imagem_reserva": "shopify://shop_images/dove-cross-necklace-2.png",
+            "alt": "Dove Cross Necklace worn with a cream camisole"
+          }
+        },
+        "b2": {
+          "type": "foto",
+          "settings": {
+            "imagem": "shopify://shop_images/infinity-cross-necklace-2.png",
+            "imagem_reserva": "",
+            "alt": "Infinity Cross Necklace worn with a ribbed tank top"
+          }
+        },
+        "b3": {
+          "type": "foto",
+          "settings": {
+            "imagem": "shopify://shop_images/sideways-cross-crystal-necklace-2.jpg",
+            "imagem_reserva": "",
+            "alt": "Sideways Cross Necklace with Crystal worn with a satin camisole"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {}
+    },
+    "ophir": {
+      "type": "gb-ophir",
+      "settings": {
+        "estilo": "faixa",
+        "link_url": "/pages/our-story",
+        "imagem": "",
+        "imagem_reserva": "shopify://shop_images/enamel-cross-pendant-necklace-1.png",
+        "alt": "Enamel Cross Medallion Necklace in gold tone"
+      }
+    },
+    "promessa": {
+      "type": "gb-promessa",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icone": "truck",
+            "titulo": "Shipping",
+            "texto": "Processed in 1 to 3 business days, with tracking by email."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icone": "return",
+            "titulo": "30-day returns",
+            "texto": "Refund or exchange, unworn and in its original packaging."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icone": "shield",
+            "titulo": "1-year warranty",
+            "texto": "Covered against manufacturing defects."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {}
+    },
+    "perguntas": {
+      "type": "gb-perguntas",
+      "blocks": {
+        "b1": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "How does Buy 3, get 20% off work?",
+            "resposta": "Add 3 necklaces to your bag and the 20% comes off automatically at checkout.",
+            "so_com_promo": true,
+            "aberta": true
+          }
+        },
+        "b2": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Where does it sit on the neck?",
+            "resposta": "It closes with a lobster clasp and an extender chain, so it sits at the base of the neck or drops to the collarbone.",
+            "aberta": false
+          }
+        },
+        "b3": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "How long does shipping take?",
+            "resposta": "Orders are processed in 1 to 3 business days, with tracking by email. Delivery time shows at checkout. Free US shipping over $50.",
+            "aberta": false
+          }
+        },
+        "b4": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Can I return it?",
+            "resposta": "Yes, within 30 days for a refund or exchange, unworn and in its original packaging.",
+            "aberta": false
+          }
+        },
+        "b5": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Is it ready to give?",
+            "resposta": "Yes. Every necklace arrives gift-ready.",
+            "aberta": false
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "fundo": "linen",
+        "um_por_vez": true
+      }
+    },
+    "cadastro": {
+      "type": "gb-cadastro",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "mais_vendidos",
+    "ocasioes",
+    "como_funciona",
+    "camadas_prontas",
+    "todo_dia",
+    "ophir",
+    "promessa",
+    "perguntas",
+    "cadastro"
+  ]
+}

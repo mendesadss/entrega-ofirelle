@@ -1,0 +1,41 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-cadastro gb-sec" data-gb-secao="cadastro">
+  <div class="gb-wrap">
+    <div class="gb-cad-in">
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-txt">{{ section.settings.texto | escape }}</p>{%- endif -%}
+      {%- form 'customer', id: 'gb-cadastro-form', class: 'gb-form' -%}
+        {%- assign gb_enviado = form.posted_successfully? -%}
+        {%- assign gb_com_erro = form.errors -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <label for="gb-email-{{ section.id }}" class="gb-sr">{{ section.settings.rotulo_campo | escape }}</label>
+        <input id="gb-email-{{ section.id }}" type="email" name="contact[email]" placeholder="{{ section.settings.rotulo_campo | escape }}" autocomplete="email" required{% if gb_com_erro %} aria-invalid="true"{% endif %}>
+        <button type="submit" class="gb-btn gb-btn-p">{{ section.settings.botao | escape }}</button>
+      {%- endform -%}
+      <p class="gb-form-ok" role="status">
+        {%- if gb_enviado -%}{{ section.settings.mensagem_ok | escape }}{%- endif -%}
+      </p>
+      {%- if gb_com_erro -%}
+        <p class="gb-form-erro" role="alert">{{ section.settings.mensagem_erro | escape }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: cadastro",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "New pieces and <em>gift ideas.</em>" },
+    { "type": "text", "id": "texto", "label": "Texto", "default": "New pieces and gift ideas. Leave anytime." },
+    { "type": "text", "id": "rotulo_campo", "label": "Texto do campo de e-mail", "default": "Email address" },
+    { "type": "text", "id": "botao", "label": "Botão", "default": "Join" },
+    { "type": "text", "id": "mensagem_ok", "label": "Mensagem de sucesso", "default": "Thank you. You are on the list." },
+    { "type": "text", "id": "mensagem_erro", "label": "Mensagem de erro", "default": "Please enter a valid email address." }
+  ],
+  "presets": [{ "name": "Ofirelle: cadastro" }]
+}
+{% endschema %}

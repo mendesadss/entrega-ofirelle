@@ -1,0 +1,62 @@
+{%- comment -%}
+  Barra de progresso do carrinho: frete grátis e o desconto da 3ª peça.
+  Não faz parte de nenhuma seção. Quem cuida da loja inclui onde quiser, por exemplo no topo do carrinho:
+    {% render 'gb-progresso-carrinho' %}
+  Parâmetros opcionais: ativa (padrão false: só com true aparecem as frases do desconto de 3 peças; ligue depois de criar o desconto automático), frete_acima (padrão 50), qtd_promo (padrão 3), pct (padrão 20),
+  texto_frete ("You are {falta} away from free US shipping."), texto_promo ("Add {faltam} more for {pct}% off."),
+  texto_completo ("Your faith set is complete. {pct}% off applied."), texto_marca ("{qtd} necklaces").
+  Usa só o objeto global cart. Não altera o carrinho do tema.
+{%- endcomment -%}
+{%- liquid
+  assign gb_ativa = ativa | default: false
+  assign gb_frete = frete_acima | default: 50 | times: 100
+  assign gb_qtd = qtd_promo | default: 3
+  assign gb_pct = pct | default: 20
+  assign gb_total = cart.total_price
+  assign gb_itens = cart.item_count
+  assign gb_falta = gb_frete | minus: gb_total
+  assign gb_falta_fmt = gb_falta | money
+  assign gb_faltam = gb_qtd | minus: gb_itens
+  assign gb_alvo = gb_frete
+  assign gb_pos = 0
+  if gb_itens > 0
+    assign gb_media = gb_total | divided_by: gb_itens
+    assign gb_alvo = gb_media | times: gb_qtd
+    if gb_alvo < gb_frete
+      assign gb_alvo = gb_frete
+    endif
+    assign gb_pos = gb_frete | times: 100.0 | divided_by: gb_alvo
+  endif
+  assign gb_largura = 0
+  if gb_alvo > 0
+    assign gb_largura = gb_total | times: 100.0 | divided_by: gb_alvo
+  endif
+  if gb_largura > 100
+    assign gb_largura = 100
+  endif
+  assign gb_msg_frete = texto_frete | default: 'You are {falta} away from free US shipping.'
+  assign gb_msg_promo = texto_promo | default: 'Add {faltam} more for {pct}% off.'
+  assign gb_marca = texto_marca | default: '{qtd} necklaces'
+  assign gb_msg_ok = texto_completo | default: 'Your faith set is complete. {pct}% off applied.'
+-%}
+{%- if gb_itens > 0 -%}
+  <div class="gb-prog gb-root" data-gb-progresso>
+    <p>
+      {%- if gb_ativa and gb_itens >= gb_qtd -%}
+        {{ gb_msg_ok | replace: '{pct}', gb_pct | escape }}
+      {%- elsif gb_falta > 0 -%}
+        {{ gb_msg_frete | replace: '{falta}', gb_falta_fmt | escape }}
+        {%- if gb_ativa and gb_itens < gb_qtd %} {{ gb_msg_promo | replace: '{faltam}', gb_faltam | replace: '{pct}', gb_pct | escape }}{%- endif -%}
+      {%- elsif gb_ativa and gb_itens < gb_qtd -%}
+        {{ gb_msg_promo | replace: '{faltam}', gb_faltam | replace: '{pct}', gb_pct | escape }}
+      {%- else -%}
+        You have free US shipping.
+      {%- endif -%}
+    </p>
+    <div class="gb-prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ gb_largura | round }}"><i style="width: {{ gb_largura | round: 1 }}%"></i></div>
+    <div class="gb-prog-marcas">
+      <span style="left: {{ gb_pos | round: 1 }}%; transform: translateX(-50%)">{{ gb_frete | money_without_trailing_zeros }}</span>
+      <span style="right: 0">{{ gb_marca | replace: '{qtd}', gb_qtd | escape }}</span>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,43 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- assign gb_b = section.settings.imagem_b | default: section.settings.imagem_b_reserva -%}
+<section class="gb-root gb-no-pescoco{% if gb_b == blank %} gb-sem-b{% endif %}" data-gb-secao="no-pescoco">
+  <div class="gb-wrap gb-in">
+    <div class="gb-ph gb-a">
+      {%- render 'gb-imagem', imagem: section.settings.imagem_a, alt: section.settings.alt_a, carga: 'lazy', sizes: '(min-width: 1100px) 628px, 100vw' -%}
+    </div>
+    {%- if gb_b != blank -%}
+      <div class="gb-ph gb-b">
+        {%- render 'gb-imagem', imagem: gb_b, alt: section.settings.alt_b, carga: 'lazy', sizes: '(min-width: 1100px) 303px, 100vw' -%}
+      </div>
+    {%- endif -%}
+    <div class="gb-t">
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-lead">{{ section.settings.texto | escape }}</p>{%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: no pescoço",
+  "tag": "section",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "On the neck" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Close to your <em>heart.</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "It sits right at the base of your neck, small enough to wear with everything you own." },
+    { "type": "header", "content": "Foto grande" },
+    { "type": "image_picker", "id": "imagem_a", "label": "Foto" },
+    { "type": "text", "id": "alt_a", "label": "Texto alternativo", "default": "Petite Puffed Cross Necklace worn at the base of the neck" },
+    { "type": "header", "content": "Foto da mão no peito" },
+    { "type": "image_picker", "id": "imagem_b", "label": "Foto própria (mão no peito segurando a cruz)" },
+    { "type": "image_picker", "id": "imagem_b_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+    { "type": "text", "id": "alt_b", "label": "Texto alternativo", "default": "A hand resting on the chest, holding a gold cross pendant" },
+    { "type": "paragraph", "content": "A foto da mão ainda não existe. Enquanto estiver vazia, aparece a reserva. Sem nenhuma das duas, a coluna some." }
+  ],
+  "presets": [{ "name": "Ofirelle: no pescoço" }]
+}
+{% endschema %}

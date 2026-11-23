@@ -1,0 +1,112 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} Quebra os rótulos do desenho do celular em duas linhas, com até 16 letras na primeira. {%- endcomment -%}
+{%- liquid
+  assign gb_r1 = section.settings.rotulo_a
+  assign gb_r2 = section.settings.rotulo_b
+  assign gb_a1 = ''
+  assign gb_a2 = ''
+  assign gb_b1 = ''
+  assign gb_b2 = ''
+  assign gb_palavras = gb_r1 | split: ' '
+  for gb_w in gb_palavras
+    assign gb_teste = gb_a1 | append: ' ' | append: gb_w | strip
+    if gb_a2 == blank and gb_teste.size <= 16
+      assign gb_a1 = gb_teste
+    else
+      assign gb_a2 = gb_a2 | append: ' ' | append: gb_w | strip
+    endif
+  endfor
+  assign gb_palavras = gb_r2 | split: ' '
+  for gb_w in gb_palavras
+    assign gb_teste = gb_b1 | append: ' ' | append: gb_w | strip
+    if gb_b2 == blank and gb_teste.size <= 16
+      assign gb_b1 = gb_teste
+    else
+      assign gb_b2 = gb_b2 | append: ' ' | append: gb_w | strip
+    endif
+  endfor
+  assign gb_rotulo_svg = section.settings.descricao_svg
+-%}
+<section class="gb-root gb-medida" data-gb-secao="medida">
+  <div class="gb-wrap gb-in">
+    <div>
+      <svg class="gb-d" viewBox="0 0 628 440" fill="none" role="img" aria-label="{{ gb_rotulo_svg | escape }}">
+        <path d="M262 40C263 120 264 180 246 214C218 252 128 262 48 300" stroke="#B08D57" stroke-width="1" stroke-linecap="round"/>
+        <path d="M366 40C365 120 364 180 382 214C410 252 500 262 580 300" stroke="#B08D57" stroke-width="1" stroke-linecap="round"/>
+        <path d="M258 196Q314 284 370 196" stroke="#1F2A44" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M314 238v12M310 242h8" stroke="#1F2A44" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M250 214Q314 420 378 214" stroke="#B08D57" stroke-width="1.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+        <path d="M314 314v12M310 318h8" stroke="#B08D57" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M326 244H436" stroke="#5B6170" stroke-width="1"/><circle cx="326" cy="244" r="2" fill="#1F2A44"/>
+        <text x="446" y="248" fill="#1F2A44" font-family="'Red Hat Text',Arial,sans-serif" font-size="13">{{ gb_r1 | escape }}</text>
+        <path d="M302 320H210" stroke="#5B6170" stroke-width="1"/><circle cx="302" cy="320" r="2" fill="#B08D57"/>
+        <text x="200" y="324" text-anchor="end" fill="#1F2A44" font-family="'Red Hat Text',Arial,sans-serif" font-size="13">{{ gb_r2 | escape }}</text>
+      </svg>
+      <svg class="gb-m" viewBox="0 0 350 260" fill="none" role="img" aria-label="{{ gb_rotulo_svg | escape }}">
+        <path d="M146 24C147 84 148 120 136 142C116 170 60 178 10 200" stroke="#B08D57" stroke-width="1" stroke-linecap="round"/>
+        <path d="M204 24C203 84 202 120 214 142C234 170 290 178 340 200" stroke="#B08D57" stroke-width="1" stroke-linecap="round"/>
+        <path d="M144 128Q175 186 206 128" stroke="#1F2A44" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M175 153v10M171 156.5h8" stroke="#1F2A44" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M138 142Q175 300 212 142" stroke="#B08D57" stroke-width="1.5" stroke-dasharray="4 4" stroke-linecap="round"/>
+        <path d="M175 216v10M171 219.5h8" stroke="#B08D57" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M184 158L208 96H220" stroke="#5B6170" stroke-width="1"/><circle cx="184" cy="158" r="2" fill="#1F2A44"/>
+        <text x="224" y="99" fill="#1F2A44" font-family="'Red Hat Text',Arial,sans-serif" font-size="11">{{ gb_a1 | escape }}</text>
+        <text x="224" y="113" fill="#1F2A44" font-family="'Red Hat Text',Arial,sans-serif" font-size="11">{{ gb_a2 | escape }}</text>
+        <path d="M184 222H226" stroke="#5B6170" stroke-width="1"/><circle cx="184" cy="222" r="2" fill="#B08D57"/>
+        <text x="232" y="219" fill="#1F2A44" font-family="'Red Hat Text',Arial,sans-serif" font-size="11">{{ gb_b1 | escape }}</text>
+        <text x="232" y="233" fill="#1F2A44" font-family="'Red Hat Text',Arial,sans-serif" font-size="11">{{ gb_b2 | escape }}</text>
+      </svg>
+    </div>
+    <div class="gb-t">
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-lead">{{ section.settings.texto | escape }}</p>{%- endif -%}
+      <ul class="gb-specs">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.valor != blank -%}
+            <li {{ block.shopify_attributes }}><span class="gb-muted">{{ block.settings.nome | escape }}</span><span>{{ block.settings.valor | escape }}</span></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: medidas",
+  "tag": "section",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Size" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "From choker <em>to collarbone.</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "The extender chain lets you choose where it sits." },
+    { "type": "text", "id": "rotulo_a", "label": "Legenda do desenho: corrente fechada", "default": "Choker, extender closed" },
+    { "type": "text", "id": "rotulo_b", "label": "Legenda do desenho: corrente aberta", "default": "Collarbone, extender open" },
+    { "type": "text", "id": "descricao_svg", "label": "Descrição do desenho (leitor de tela)", "default": "Where the necklace sits: at the base of the neck with the extender closed, at the collarbone with it open" }
+  ],
+  "blocks": [
+    {
+      "type": "linha",
+      "name": "Linha de medida",
+      "settings": [
+        { "type": "text", "id": "nome", "label": "Nome", "default": "Pendant" },
+        { "type": "text", "id": "valor", "label": "Valor (vazio esconde a linha)", "default": "Petite puffed cross" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Ofirelle: medidas",
+      "blocks": [
+        { "type": "linha", "settings": { "nome": "Pendant", "valor": "Petite puffed cross" } },
+        { "type": "linha", "settings": { "nome": "Chain", "valor": "Fine cable chain" } },
+        { "type": "linha", "settings": { "nome": "Clasp", "valor": "Lobster, with extender chain" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

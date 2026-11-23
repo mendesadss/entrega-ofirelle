@@ -1,0 +1,78 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'gb-loja.js' | asset_url }}" defer="defer"></script>
+
+{%- assign gb_pct = section.settings.promo_pct -%}
+{%- assign gb_minq = section.settings.promo_qtd -%}
+<section class="gb-root gb-combine-com" data-gb-secao="combine-com" data-gb-cart-add="{{ routes.cart_add_url }}.js" data-gb-cart-url="{{ routes.cart_url }}" data-gb-money="{{ shop.money_format | escape }}">
+  <div class="gb-wrap">
+    <div class="gb-cc-head">
+      <div>
+        {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+        <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      </div>
+      {%- if section.settings.promo_ativa and section.settings.nota != blank -%}
+        <p class="gb-muted">{{ section.settings.nota | escape | replace: '{qtd}', gb_minq | replace: '{pct}', gb_pct }}</p>
+      {%- endif -%}
+    </div>
+    <div class="gb-cc-cards">
+      {%- for block in section.blocks -%}
+        {%- assign gb_p = block.settings.produto -%}
+        {%- if gb_p != blank -%}
+          {%- assign gb_v = gb_p.selected_or_first_available_variant -%}
+          <div class="gb-card" {{ block.shopify_attributes }}>
+            <a href="{{ gb_p.url }}">
+              <div class="gb-ph">
+                {%- render 'gb-imagem', imagem: gb_p.featured_image, alt: gb_p.title, carga: 'lazy', widths: '300, 450, 600, 900', sizes: '(min-width: 1100px) 25vw, 50vw' -%}
+              </div>
+              <p class="gb-card-nome">{{ gb_p.title | escape }}</p>
+              <p class="gb-card-preco">{{ gb_v.price | money }}</p>
+            </a>
+            {%- if gb_p.available and gb_v.available -%}
+              <button type="button" class="gb-add" data-gb-add-variante="{{ gb_v.id }}">{{ section.settings.botao | escape }}</button>
+            {%- else -%}
+              <button type="button" class="gb-add" disabled>{{ section.settings.esgotado | escape }}</button>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    <p class="gb-erro" role="alert" data-gb-erro hidden>{{ section.settings.erro | escape }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: combine com",
+  "tag": "div",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Complete your set" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Wear it <em>with.</em>" },
+    { "type": "text", "id": "nota", "label": "Nota ({qtd} e {pct} viram os valores da oferta)", "default": "Any {qtd}, {pct}% off." },
+    { "type": "text", "id": "botao", "label": "Botão", "default": "Add" },
+    { "type": "text", "id": "esgotado", "label": "Botão esgotado", "default": "Sold out" },
+    { "type": "text", "id": "erro", "label": "Erro ao adicionar", "default": "We could not add this to your bag. Please try again." },
+    { "type": "header", "content": "Oferta (use os mesmos valores nas outras seções)" },
+    { "type": "checkbox", "id": "promo_ativa", "label": "Promoção de 3 colares ativa (só ligue depois de criar o desconto automático e provar no carrinho)", "default": false },
+    { "type": "number", "id": "promo_pct", "label": "Desconto (%)", "default": 20 },
+    { "type": "range", "id": "promo_qtd", "label": "Peças para o desconto", "min": 2, "max": 6, "step": 1, "default": 3 }
+  ],
+  "blocks": [
+    {
+      "type": "produto",
+      "name": "Produto",
+      "limit": 8,
+      "settings": [
+        { "type": "product", "id": "produto", "label": "Produto" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ofirelle: combine com",
+      "blocks": [{ "type": "produto" }, { "type": "produto" }, { "type": "produto" }, { "type": "produto" }]
+    }
+  ]
+}
+{% endschema %}

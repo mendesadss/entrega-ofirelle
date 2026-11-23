@@ -1,0 +1,21 @@
+{%- comment -%}
+  Ícones de traço fino da Ofirelle.
+  Parâmetros: nome (arrow, plus, minus, truck, return, shield, gift, heart, cross, ruler, check), tamanho (número, padrão 20), cor (padrão currentColor).
+{%- endcomment -%}
+{%- assign gb_tam = tamanho | default: 20 -%}
+{%- assign gb_cor = cor | default: 'currentColor' -%}
+<svg viewBox="0 0 24 24" fill="none" stroke="{{ gb_cor }}" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" width="{{ gb_tam }}" height="{{ gb_tam }}">
+  {%- case nome -%}
+    {%- when 'arrow' -%}<path d="M5 12h14M13 6l6 6-6 6"/>
+    {%- when 'plus' -%}<path d="M12 5v14M5 12h14"/>
+    {%- when 'minus' -%}<path d="M5 12h14"/>
+    {%- when 'truck' -%}<path d="M2.5 6.5h11v9.5h-11z"/><path d="M13.5 9.5h4l3 3.2V16h-7"/><circle cx="7" cy="17.5" r="1.75"/><circle cx="17" cy="17.5" r="1.75"/>
+    {%- when 'return' -%}<path d="M4.5 9.5h10a5 5 0 0 1 0 10H8"/><path d="M8.5 5.5l-4 4 4 4"/>
+    {%- when 'shield' -%}<path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/>
+    {%- when 'gift' -%}<path d="M3.5 8h17v4h-17z"/><path d="M5 12v8.5h14V12"/><path d="M12 8v12.5"/><path d="M12 8C10.2 4.6 6.6 4.7 7 6.6 7.3 8 12 8 12 8zM12 8c1.8-3.4 5.4-3.3 5-1.4-.3 1.4-5 1.4-5 1.4z"/>
+    {%- when 'heart' -%}<path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/>
+    {%- when 'cross' -%}<path d="M12 3v18M7 8.5h10"/>
+    {%- when 'ruler' -%}<path d="M2.5 8.5h19v7h-19z"/><path d="M6 8.5v3M9.5 8.5v2M13 8.5v3M16.5 8.5v2"/>
+    {%- when 'check' -%}<path d="m5 12.5 4.5 4.5L19 7.5"/>
+  {%- endcase -%}
+</svg>

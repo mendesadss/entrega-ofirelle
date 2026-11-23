@@ -1,0 +1,356 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'gb-loja.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign gb_ativa = section.settings.promo_ativa
+  assign gb_pct = section.settings.promo_pct
+  assign gb_minq = section.settings.promo_qtd
+  assign gb_frete = section.settings.frete_gratis_acima | times: 100
+  assign gb_frete_fmt = gb_frete | money_without_trailing_zeros
+  assign gb_v = product.selected_or_first_available_variant
+  assign gb_preco = gb_v.price
+  assign gb_maxq = 2
+  if gb_ativa and gb_minq > 2
+    assign gb_maxq = gb_minq
+  endif
+  assign gb_ex_json = ''
+  assign gb_lp = gb_preco
+  assign gb_linha = 1
+-%}
+
+{%- comment -%} Linhas da lista do conjunto: 1 = esta peça, depois as peças extras, depois repete esta peça até completar. {%- endcomment -%}
+{%- capture gb_linhas_html -%}
+  <li data-gb-min="1">
+    {%- render 'gb-imagem', imagem: product.featured_image, alt: product.title, carga: 'lazy', widths: '112, 224', sizes: '56px' -%}
+    <span>{{ product.title | escape }}</span>
+    <span data-gb-linha-preco="1">{{ gb_preco | money }}</span>
+  </li>
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'peca_extra' -%}
+      {%- assign gb_p = block.settings.produto -%}
+      {%- if gb_p != blank and gb_p.available and gb_linha < gb_maxq -%}
+        {%- assign gb_linha = gb_linha | plus: 1 -%}
+        {%- assign gb_pv = gb_p.selected_or_first_available_variant -%}
+        {%- assign gb_lp = gb_lp | append: ',' | append: gb_pv.price -%}
+        {%- capture gb_ex -%}{"id":{{ gb_pv.id }},"price":{{ gb_pv.price }}}{%- endcapture -%}
+        {%- if gb_ex_json == blank -%}{%- assign gb_ex_json = gb_ex -%}{%- else -%}{%- assign gb_ex_json = gb_ex_json | append: ',' | append: gb_ex -%}{%- endif -%}
+        <li data-gb-min="{{ gb_linha }}" {{ block.shopify_attributes }}>
+          {%- render 'gb-imagem', imagem: gb_p.featured_image, alt: gb_p.title, carga: 'lazy', widths: '112, 224', sizes: '56px' -%}
+          <span>{{ gb_p.title | escape }}<br><a href="{{ section.settings.url_trocar | default: routes.all_products_collection_url }}">{{ section.settings.texto_trocar | escape }}</a></span>
+          <span>{{ gb_pv.price | money }}</span>
+        </li>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- for gb_pad in (2..gb_maxq) -%}
+    {%- if gb_pad > gb_linha -%}
+      {%- assign gb_lp = gb_lp | append: ',' | append: gb_preco -%}
+      <li data-gb-min="{{ gb_pad }}" data-gb-repete="true">
+        {%- render 'gb-imagem', imagem: product.featured_image, alt: product.title, carga: 'lazy', widths: '112, 224', sizes: '56px' -%}
+        <span>{{ product.title | escape }}<br><a href="{{ section.settings.url_trocar | default: routes.all_products_collection_url }}">{{ section.settings.texto_trocar | escape }}</a></span>
+        <span>{{ gb_preco | money }}</span>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- liquid
+  assign gb_precos = gb_lp | split: ','
+  assign gb_qtds_s = '1,2'
+  if gb_ativa and gb_minq > 2
+    assign gb_qtds_s = gb_qtds_s | append: ',' | append: gb_minq
+  endif
+  assign gb_qtds = gb_qtds_s | split: ','
+  assign gb_sel = 1
+  if gb_ativa
+    assign gb_sel = gb_minq
+  endif
+  assign gb_colunas = gb_qtds.size
+-%}
+
+{%- comment -%} Estado inicial (para quem abre sem JS e para o primeiro desenho). O JS refaz as mesmas contas quando a pessoa clica. {%- endcomment -%}
+{%- liquid
+  assign gb_total_sel = 0
+  for gb_i in (1..gb_sel)
+    assign gb_idx = gb_i | minus: 1
+    assign gb_pl = gb_precos[gb_idx] | plus: 0
+    assign gb_total_sel = gb_total_sel | plus: gb_pl
+  endfor
+  assign gb_desc_sel = 0
+  if gb_ativa and gb_sel >= gb_minq
+    assign gb_desc_sel = gb_total_sel | times: gb_pct | divided_by: 100.0 | round
+  endif
+  assign gb_pagar_sel = gb_total_sel | minus: gb_desc_sel
+-%}
+
+<section class="gb-root gb-galeria-compra" data-gb-secao="galeria-compra" data-gb-cart-add="{{ routes.cart_add_url }}.js" data-gb-cart-url="{{ routes.cart_url }}" data-gb-money="{{ shop.money_format | escape }}">
+  <div class="gb-wrap gb-in">
+    <div class="gb-gal" data-gb-galeria>
+      <div class="gb-gal-strip" tabindex="0" aria-label="{{ section.settings.gal_rotulo | escape }}" data-gb-gal-strip>
+        {%- assign gb_total_midias = 0 -%}
+        {%- for media in product.media -%}
+          {%- if media.media_type == 'image' -%}
+            {%- assign gb_total_midias = gb_total_midias | plus: 1 -%}
+            {%- assign gb_alt_midia = media.alt | default: product.title -%}
+            <div class="gb-ph gb-gal-item{% if gb_total_midias == 1 %} gb-main{% endif %}" data-gb-item>
+              <button type="button" data-gb-thumb="{{ gb_total_midias }}" aria-label="{{ section.settings.gal_ver | escape | replace: '{n}', gb_total_midias }}">
+                {%- if gb_total_midias == 1 -%}
+                  {%- render 'gb-imagem', imagem: media.preview_image, alt: gb_alt_midia, carga: 'eager', sizes: '(min-width: 1100px) 741px, (min-width: 760px) 50vw, 100vw', widths: '400, 600, 800, 1000, 1200' -%}
+                {%- else -%}
+                  {%- render 'gb-imagem', imagem: media.preview_image, alt: gb_alt_midia, carga: 'lazy', sizes: '(min-width: 1100px) 370px, (min-width: 760px) 25vw, 100vw', widths: '400, 600, 800, 1000, 1200' -%}
+                {%- endif -%}
+              </button>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <button type="button" class="gb-gal-nav gb-gal-prev" aria-label="{{ section.settings.gal_ant | escape }}" data-gb-passo="-1"><span>{% render 'gb-icone', nome: 'arrow', tamanho: 16 %}</span></button>
+      <button type="button" class="gb-gal-nav gb-gal-next" aria-label="{{ section.settings.gal_prox | escape }}" data-gb-passo="1"><span>{% render 'gb-icone', nome: 'arrow', tamanho: 16 %}</span></button>
+      <span class="gb-gal-count" aria-live="polite" data-gb-contador="{{ section.settings.gal_contador | escape }}" data-gb-total="{{ gb_total_midias }}">{{ section.settings.gal_contador | escape | replace: '{atual}', '1' | replace: '{total}', gb_total_midias }}</span>
+    </div>
+
+    <div class="gb-buy" data-gb-compra>
+      {%- if section.settings.breadcrumb_texto != blank and section.settings.breadcrumb_url != blank -%}
+        <nav class="gb-crumb gb-d" aria-label="Breadcrumb"><a href="{{ section.settings.breadcrumb_url }}">{{ section.settings.breadcrumb_texto | escape }}</a><span aria-hidden="true">/</span><span>{{ product.title | escape }}</span></nav>
+      {%- endif -%}
+      <h1>{{ product.title | escape }}</h1>
+      <p class="gb-price" data-gb-preco-produto>{{ gb_preco | money }}</p>
+      {%- if section.settings.material != blank -%}<p class="gb-mat">{{ section.settings.material | escape }}</p>{%- endif -%}
+      <ul class="gb-bens">
+        {%- if section.settings.beneficio_1 != blank -%}<li>{% render 'gb-icone', nome: 'heart' %}{{ section.settings.beneficio_1 | escape | replace: '{frete}', gb_frete_fmt }}</li>{%- endif -%}
+        {%- if section.settings.beneficio_2 != blank -%}<li>{% render 'gb-icone', nome: 'truck' %}{{ section.settings.beneficio_2 | escape | replace: '{frete}', gb_frete_fmt }}</li>{%- endif -%}
+        {%- if section.settings.beneficio_3 != blank -%}<li>{% render 'gb-icone', nome: 'gift' %}{{ section.settings.beneficio_3 | escape | replace: '{frete}', gb_frete_fmt }}</li>{%- endif -%}
+      </ul>
+      <div class="gb-rule gb-d"></div>
+      {%- unless gb_v.title == 'Default Title' -%}
+        <div class="gb-finish">
+          <p>{{ section.settings.rotulo_acabamento | escape }}: <span data-gb-variante-nome>{{ gb_v.option1 | escape }}</span></p>
+          {%- if product.variants.size > 1 -%}
+            <div role="group" aria-label="{{ section.settings.rotulo_acabamento | escape }}">
+              {%- for variant in product.variants -%}
+                <button type="button" class="gb-chip" data-gb-variante="{{ variant.id }}" aria-pressed="{% if variant.id == gb_v.id %}true{% else %}false{% endif %}"{% unless variant.available %} disabled{% endunless %}>{{ variant.option1 | escape }}</button>
+              {%- endfor -%}
+            </div>
+          {%- else -%}
+            <button type="button" class="gb-ib" aria-label="{{ gb_v.option1 | escape }}" aria-pressed="true"><span class="gb-sw"><i></i></span></button>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+
+      {%- if gb_ativa or section.settings.rotulo_conjunto != blank -%}
+        <p class="gb-label gb-set-label gb-d">{{ section.settings.rotulo_conjunto | escape }}</p>
+      {%- endif -%}
+      <div class="gb-qty gb-qty--{{ gb_colunas }}" role="radiogroup" aria-label="{{ section.settings.rotulo_qtd | escape }}" data-gb-qtys>
+        {%- for gb_qs in gb_qtds -%}
+          {%- liquid
+            assign gb_q = gb_qs | plus: 0
+            assign gb_t = 0
+            for gb_i in (1..gb_q)
+              assign gb_idx = gb_i | minus: 1
+              assign gb_pl = gb_precos[gb_idx] | plus: 0
+              assign gb_t = gb_t | plus: gb_pl
+            endfor
+            assign gb_d = 0
+            if gb_ativa and gb_q >= gb_minq
+              assign gb_d = gb_t | times: gb_pct | divided_by: 100.0 | round
+            endif
+            assign gb_pg = gb_t | minus: gb_d
+            assign gb_cd = gb_pg | times: 1.0 | divided_by: gb_q | round
+            assign gb_ec = gb_d
+          -%}
+          <button type="button" role="radio" aria-checked="{% if gb_q == gb_sel %}true{% else %}false{% endif %}" data-gb-qty="{{ gb_q }}">
+            {%- if gb_d > 0 -%}<span class="gb-badge">{{ section.settings.selo_melhor | escape }}</span>{%- endif -%}
+            <span class="gb-q1">{%- if gb_q == 1 -%}{{ section.settings.rotulo_um | escape | replace: '{n}', gb_q }}{%- else -%}{{ section.settings.rotulo_varios | escape | replace: '{n}', gb_q }}{%- endif -%}</span>
+            <span class="gb-q2">{{ gb_pg | money }}{%- if gb_d > 0 %} <s>{{ gb_t | money }}</s>{%- endif -%}</span>
+            {%- capture gb_cd_fmt -%}{{ gb_cd | money }}{%- endcapture -%}
+            {%- capture gb_ec_fmt -%}{{ gb_ec | money }}{%- endcapture -%}
+            <span class="gb-q3 gb-gold">
+              {%- if gb_d > 0 -%}
+                {{ section.settings.cartao_cada | escape | replace: '{cada}', gb_cd_fmt }}<span class="gb-d">{{ section.settings.cartao_economia | escape | replace: '{economia}', gb_ec_fmt }}</span>
+              {%- elsif gb_t >= gb_frete -%}
+                {{ section.settings.cartao_frete | escape | replace: '{frete}', gb_frete_fmt }}
+              {%- elsif gb_q == 1 -%}
+                {{ section.settings.cartao_um | escape }}
+              {%- endif -%}
+            </span>
+          </button>
+        {%- endfor -%}
+      </div>
+
+      <div class="gb-set-list" data-gb-lista{% if gb_sel < 2 %} hidden{% endif %}>
+        <ul>{{ gb_linhas_html }}</ul>
+        <p class="gb-set-total" data-gb-total-linha>
+          {%- if gb_desc_sel > 0 -%}
+            <span>{{ section.settings.total_rotulo | escape }}</span><span><s>{{ gb_total_sel | money }}</s> <strong>{{ gb_pagar_sel | money }}</strong></span>
+          {%- elsif gb_total_sel >= gb_frete -%}
+            <span>{{ section.settings.frete_incluido | escape | replace: '{frete}', gb_frete_fmt }}</span><strong>{{ gb_pagar_sel | money }}</strong>
+          {%- else -%}
+            <span>{{ section.settings.total_rotulo | escape }}</span><strong>{{ gb_pagar_sel | money }}</strong>
+          {%- endif -%}
+        </p>
+      </div>
+
+      {%- form 'product', product, id: 'gb-form-produto', class: 'gb-form-produto', novalidate: 'novalidate', data-gb-form-produto: '' -%}
+        <input type="hidden" name="id" value="{{ gb_v.id }}" data-gb-variante-id{% unless gb_v.available %} disabled{% endunless %}>
+        <button type="submit" class="gb-btn gb-btn-p gb-btn-full gb-buy-btn" data-gb-comprar{% unless gb_v.available %} disabled aria-disabled="true"{% endunless %}>
+          {%- if gb_v.available -%}
+            {%- if gb_sel == 1 -%}{{ section.settings.botao_um | escape }}{%- else -%}{{ section.settings.botao_varios | escape | replace: '{n}', gb_sel }}{%- endif -%}
+            {{ ' · ' }}{{ gb_pagar_sel | money }}
+          {%- else -%}
+            {{ section.settings.botao_esgotado | escape }}
+          {%- endif -%}
+        </button>
+        <p class="gb-note" data-gb-nota>
+          {%- if gb_desc_sel > 0 -%}
+            {%- capture gb_ec_sel_fmt -%}{{ gb_desc_sel | money }}{%- endcapture -%}
+            <span class="gb-m gb-mi-inline" data-gb-nota-economia>{{ section.settings.nota_economia | escape | replace: '{economia}', gb_ec_sel_fmt }}</span>{{ section.settings.nota_promo | escape | replace: '{pct}', gb_pct | replace: '{qtd}', gb_minq }}
+          {%- elsif gb_ativa and gb_sel < gb_minq -%}
+            {%- assign gb_faltam = gb_minq | minus: gb_sel -%}
+            {{ section.settings.nota_faltam | escape | replace: '{faltam}', gb_faltam | replace: '{pct}', gb_pct }}
+          {%- endif -%}
+        </p>
+        <p class="gb-erro" role="alert" data-gb-erro hidden></p>
+      {%- endform -%}
+
+      <div class="gb-mini">
+        {%- if section.settings.mini_1 != blank -%}<p>{% render 'gb-icone', nome: 'truck', tamanho: 18 %}{{ section.settings.mini_1 | escape | replace: '{frete}', gb_frete_fmt }}</p>{%- endif -%}
+        {%- if section.settings.mini_2 != blank -%}<p>{% render 'gb-icone', nome: 'return', tamanho: 18 %}{{ section.settings.mini_2 | escape }}</p>{%- endif -%}
+        {%- if section.settings.mini_3 != blank -%}<p>{% render 'gb-icone', nome: 'shield', tamanho: 18 %}{{ section.settings.mini_3 | escape }}</p>{%- endif -%}
+        {%- if section.settings.mini_4 != blank -%}<p>{% render 'gb-icone', nome: 'gift', tamanho: 18 %}{{ section.settings.mini_4 | escape }}</p>{%- endif -%}
+      </div>
+
+      <div class="gb-tabs gb-d">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'aba' -%}
+            <details {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.titulo | escape }}<span class="gb-mais">{% render 'gb-icone', nome: 'plus', tamanho: 18 %}</span><span class="gb-menos">{% render 'gb-icone', nome: 'minus', tamanho: 18 %}</span></summary>
+              {%- if block.settings.usar_descricao and product.description != blank -%}
+                <div class="gb-resp">{{ product.description }}</div>
+              {%- else -%}
+                <p>{{ block.settings.texto | escape | replace: '{frete}', gb_frete_fmt }}</p>
+              {%- endif -%}
+            </details>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" data-gb-dados>
+    {
+      "variantes": [
+        {%- for variant in product.variants -%}
+          {"id": {{ variant.id }}, "price": {{ variant.price }}, "available": {{ variant.available }}, "title": {{ variant.option1 | json }}}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "selecionada": {{ gb_v.id }},
+      "extras": [{{ gb_ex_json }}],
+      "maxq": {{ gb_maxq }},
+      "qtd": {{ gb_sel }},
+      "promo": { "ativa": {{ gb_ativa | json }}, "pct": {{ gb_pct }}, "qtd": {{ gb_minq }} },
+      "frete": {{ gb_frete }},
+      "textos": {
+        "rotuloUm": {{ section.settings.rotulo_um | json }},
+        "rotuloVarios": {{ section.settings.rotulo_varios | json }},
+        "botaoUm": {{ section.settings.botao_um | json }},
+        "botaoVarios": {{ section.settings.botao_varios | json }},
+        "botaoEsgotado": {{ section.settings.botao_esgotado | json }},
+        "totalRotulo": {{ section.settings.total_rotulo | json }},
+        "freteIncluido": {{ section.settings.frete_incluido | replace: '{frete}', gb_frete_fmt | json }},
+        "cartaoUm": {{ section.settings.cartao_um | json }},
+        "cartaoFrete": {{ section.settings.cartao_frete | replace: '{frete}', gb_frete_fmt | json }},
+        "cartaoCada": {{ section.settings.cartao_cada | json }},
+        "cartaoEconomia": {{ section.settings.cartao_economia | json }},
+        "notaPromo": {{ section.settings.nota_promo | json }},
+        "notaEconomia": {{ section.settings.nota_economia | json }},
+        "notaFaltam": {{ section.settings.nota_faltam | json }},
+        "erro": {{ section.settings.erro | json }},
+        "contador": {{ section.settings.gal_contador | json }}
+      }
+    }
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: fotos e compra",
+  "tag": "div",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "header", "content": "Oferta (use os mesmos valores nas outras seções)" },
+    { "type": "checkbox", "id": "promo_ativa", "label": "Promoção de 3 colares ativa (só ligue depois de criar o desconto automático e provar no carrinho)", "default": false },
+    { "type": "number", "id": "promo_pct", "label": "Desconto (%)", "default": 20 },
+    { "type": "range", "id": "promo_qtd", "label": "Peças para o desconto", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "type": "number", "id": "frete_gratis_acima", "label": "Frete grátis acima de (valor inteiro da moeda)", "default": 50 },
+    { "type": "paragraph", "content": "O desconto em si é automático da loja (criado em Descontos, com o sim do dono) e aplicado no carrinho. A página mostra a estimativa." },
+    { "type": "header", "content": "Caminho de navegação" },
+    { "type": "text", "id": "breadcrumb_texto", "label": "Texto do caminho", "default": "Cross Necklaces" },
+    { "type": "url", "id": "breadcrumb_url", "label": "Link do caminho" },
+    { "type": "header", "content": "Produto" },
+    { "type": "text", "id": "material", "label": "Material (uma linha)", "default": "Gold-tone stainless steel" },
+    { "type": "text", "id": "beneficio_1", "label": "Benefício 1", "default": "Sits at the base of your neck" },
+    { "type": "text", "id": "beneficio_2", "label": "Benefício 2 ({frete} vira o valor)", "default": "Free US shipping over {frete}" },
+    { "type": "text", "id": "beneficio_3", "label": "Benefício 3", "default": "Gift-ready, 30-day returns" },
+    { "type": "text", "id": "rotulo_acabamento", "label": "Rótulo do acabamento", "default": "Finish" },
+    { "type": "header", "content": "Cartões de quantidade" },
+    { "type": "text", "id": "rotulo_conjunto", "label": "Rótulo acima dos cartões", "default": "Build your faith set" },
+    { "type": "text", "id": "rotulo_qtd", "label": "Nome do grupo (leitor de tela)", "default": "How many necklaces" },
+    { "type": "text", "id": "rotulo_um", "label": "Cartão com 1 peça", "default": "{n} necklace" },
+    { "type": "text", "id": "rotulo_varios", "label": "Cartão com várias peças", "default": "{n} necklaces" },
+    { "type": "text", "id": "cartao_um", "label": "Frase do cartão de 1 peça", "default": "Just this one" },
+    { "type": "text", "id": "cartao_frete", "label": "Frase quando passa do frete grátis", "default": "Free US shipping" },
+    { "type": "text", "id": "cartao_cada", "label": "Frase do preço por peça ({cada})", "default": "about {cada} each" },
+    { "type": "text", "id": "cartao_economia", "label": "Frase da economia ({economia})", "default": ", save {economia}" },
+    { "type": "text", "id": "selo_melhor", "label": "Selo do cartão de maior economia", "default": "Best value" },
+    { "type": "url", "id": "url_trocar", "label": "Link de troca (coleção de onde escolher outra peça)" },
+    { "type": "text", "id": "texto_trocar", "label": "Texto do link de troca", "default": "Change" },
+    { "type": "text", "id": "total_rotulo", "label": "Rótulo do total", "default": "Total" },
+    { "type": "text", "id": "frete_incluido", "label": "Total com frete grátis", "default": "Free US shipping included" },
+    { "type": "header", "content": "Botão e avisos" },
+    { "type": "text", "id": "botao_um", "label": "Botão com 1 peça", "default": "Add to bag" },
+    { "type": "text", "id": "botao_varios", "label": "Botão com várias peças ({n})", "default": "Add {n} necklaces" },
+    { "type": "text", "id": "botao_esgotado", "label": "Botão sem estoque", "default": "Sold out" },
+    { "type": "text", "id": "nota_promo", "label": "Aviso do desconto ({pct}, {qtd})", "default": "{pct}% off applied automatically at checkout. No code needed." },
+    { "type": "text", "id": "nota_economia", "label": "Aviso de economia (aparece só no celular, {economia})", "default": "You save {economia}. " },
+    { "type": "text", "id": "nota_faltam", "label": "Aviso de peças que faltam ({faltam}, {pct})", "default": "Add {faltam} more for {pct}% off." },
+    { "type": "text", "id": "erro", "label": "Erro ao adicionar", "default": "We could not add this to your bag. Please try again." },
+    { "type": "header", "content": "Selos pequenos sob o botão" },
+    { "type": "text", "id": "mini_1", "label": "Selo 1", "default": "Free US shipping over {frete}" },
+    { "type": "text", "id": "mini_2", "label": "Selo 2", "default": "30-day returns" },
+    { "type": "text", "id": "mini_3", "label": "Selo 3", "default": "1-year warranty" },
+    { "type": "text", "id": "mini_4", "label": "Selo 4", "default": "Gift-ready" },
+    { "type": "header", "content": "Galeria" },
+    { "type": "text", "id": "gal_rotulo", "label": "Nome da galeria (leitor de tela)", "default": "Product photos" },
+    { "type": "text", "id": "gal_ver", "label": "Botão da foto ({n})", "default": "Show photo {n}" },
+    { "type": "text", "id": "gal_ant", "label": "Seta anterior", "default": "Previous photo" },
+    { "type": "text", "id": "gal_prox", "label": "Seta seguinte", "default": "Next photo" },
+    { "type": "text", "id": "gal_contador", "label": "Contador ({atual}, {total})", "default": "{atual} / {total}" }
+  ],
+  "blocks": [
+    {
+      "type": "peca_extra",
+      "name": "Peça do conjunto",
+      "limit": 5,
+      "settings": [
+        { "type": "product", "id": "produto", "label": "Peça que entra nos cartões de 2 e 3 colares" }
+      ]
+    },
+    {
+      "type": "aba",
+      "name": "Aba",
+      "settings": [
+        { "type": "text", "id": "titulo", "label": "Título", "default": "Details" },
+        { "type": "checkbox", "id": "usar_descricao", "label": "Usar a descrição do produto", "default": false },
+        { "type": "textarea", "id": "texto", "label": "Texto (se não usar a descrição)", "default": "A small, softly rounded gold cross that sits right at the base of your neck." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ofirelle: fotos e compra",
+      "blocks": [{ "type": "peca_extra" }, { "type": "peca_extra" }, { "type": "aba" }]
+    }
+  ]
+}
+{% endschema %}

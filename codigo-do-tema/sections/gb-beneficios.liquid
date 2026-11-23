@@ -1,0 +1,70 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-beneficios" data-gb-secao="beneficios">
+  <div class="gb-wrap gb-in">
+    <div>
+      {%- if section.settings.rotulo != blank -%}
+        <p class="gb-label"><span class="gb-fio gb-d" aria-hidden="true"></span>{{ section.settings.rotulo | escape }}</p>
+      {%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+    </div>
+    <ul>
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          <span style="color: var(--gb-gold)">{% render 'gb-icone', nome: block.settings.icone, tamanho: 24 %}</span>
+          <div>
+            <h3>{{ block.settings.titulo | escape }}</h3>
+            <p>{{ block.settings.texto | escape }}</p>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: benefícios",
+  "tag": "section",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Made for every day" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Small, soft, and <em>easy to wear.</em>" }
+  ],
+  "blocks": [
+    {
+      "type": "beneficio",
+      "name": "Benefício",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icone",
+          "label": "Ícone",
+          "options": [
+            { "value": "cross", "label": "Cruz" },
+            { "value": "ruler", "label": "Medida" },
+            { "value": "heart", "label": "Coração" },
+            { "value": "gift", "label": "Presente" },
+            { "value": "shield", "label": "Escudo" }
+          ],
+          "default": "cross"
+        },
+        { "type": "text", "id": "titulo", "label": "Título", "default": "A softly rounded cross" },
+        { "type": "text", "id": "texto", "label": "Texto", "default": "A solid puffed shape with smooth edges that catch the light." }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Ofirelle: benefícios",
+      "blocks": [
+        { "type": "beneficio", "settings": { "icone": "cross", "titulo": "A softly rounded cross", "texto": "A solid puffed shape with smooth edges that catch the light." } },
+        { "type": "beneficio", "settings": { "icone": "ruler", "titulo": "Choker to collarbone", "texto": "Adjust it with the extender." } },
+        { "type": "beneficio", "settings": { "icone": "heart", "titulo": "Easy to layer", "texto": "Wear it alone or layered with other necklaces." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

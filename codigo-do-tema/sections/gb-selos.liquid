@@ -1,0 +1,66 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- assign gb_frete = section.settings.frete_gratis_acima -%}
+{%- capture gb_frete_fmt -%}{{ gb_frete | times: 100 | money_without_trailing_zeros }}{%- endcapture -%}
+<section class="gb-root gb-selos" data-gb-secao="selos">
+  <div class="gb-wrap">
+    <ul>
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          {% render 'gb-icone', nome: block.settings.icone, tamanho: 24 %}
+          <div>
+            <b>{{ block.settings.titulo | escape | replace: '{frete}', gb_frete_fmt }}</b>
+            {%- if block.settings.texto != blank -%}<small>{{ block.settings.texto | escape }}</small>{%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: selos",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "number", "id": "frete_gratis_acima", "label": "Frete grátis acima de (em dólares; vale para {frete} nos textos)", "default": 50 }
+  ],
+  "blocks": [
+    {
+      "type": "selo",
+      "name": "Selo",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icone",
+          "label": "Ícone",
+          "options": [
+            { "value": "truck", "label": "Caminhão" },
+            { "value": "return", "label": "Devolução" },
+            { "value": "shield", "label": "Escudo" },
+            { "value": "gift", "label": "Presente" },
+            { "value": "heart", "label": "Coração" },
+            { "value": "check", "label": "Marca de ok" }
+          ],
+          "default": "truck"
+        },
+        { "type": "text", "id": "titulo", "label": "Título ({frete} vira o valor do frete grátis)", "default": "Free US shipping over {frete}" },
+        { "type": "text", "id": "texto", "label": "Texto de apoio", "default": "Processed in 1 to 3 business days" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Ofirelle: selos",
+      "blocks": [
+        { "type": "selo", "settings": { "icone": "truck", "titulo": "Free US shipping over {frete}", "texto": "Processed in 1 to 3 business days" } },
+        { "type": "selo", "settings": { "icone": "return", "titulo": "30-day returns", "texto": "Refund or exchange" } },
+        { "type": "selo", "settings": { "icone": "shield", "titulo": "1-year warranty", "texto": "Manufacturing defects" } },
+        { "type": "selo", "settings": { "icone": "gift", "titulo": "Gift-ready", "texto": "Ready to give" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

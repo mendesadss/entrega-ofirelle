@@ -1,0 +1,106 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'gb-loja.js' | asset_url }}" defer="defer"></script>
+
+{%- assign gb_ativa = section.settings.promo_ativa -%}
+<section class="gb-root gb-camadas-prontas gb-sec gb-linen" data-gb-secao="camadas-prontas" data-gb-cart-add="{{ routes.cart_add_url }}.js" data-gb-cart-url="{{ routes.cart_url }}" data-gb-money="{{ shop.money_format | escape }}">
+  <div class="gb-wrap">
+    <div class="gb-head"><h2 class="gb-h2">{{ section.settings.titulo }}</h2></div>
+    <div class="gb-sets">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign gb_total = 0
+          assign gb_n = 0
+          assign gb_itens = ''
+          assign gb_nomes = ''
+          assign gb_primeira = ''
+          assign gb_slots = 'peca_1,peca_2,peca_3,peca_4' | split: ','
+        -%}
+        {%- capture gb_minis -%}
+          {%- for slot in gb_slots -%}
+            {%- assign gb_p = block.settings[slot] -%}
+            {%- if gb_p != blank and gb_p.available -%}
+              {%- assign gb_v = gb_p.selected_or_first_available_variant -%}
+              {%- assign gb_total = gb_total | plus: gb_v.price -%}
+              {%- assign gb_n = gb_n | plus: 1 -%}
+              {%- if gb_primeira == blank -%}{%- assign gb_primeira = gb_v.id -%}{%- endif -%}
+              {%- capture gb_item -%}{"id":{{ gb_v.id }},"quantity":1}{%- endcapture -%}
+              {%- if gb_itens == blank -%}{%- assign gb_itens = gb_item -%}{%- else -%}{%- assign gb_itens = gb_itens | append: ',' | append: gb_item -%}{%- endif -%}
+              {%- if gb_nomes == blank -%}{%- assign gb_nomes = gb_p.title -%}{%- else -%}{%- assign gb_nomes = gb_nomes | append: ', ' | append: gb_p.title -%}{%- endif -%}
+              {%- render 'gb-imagem', imagem: gb_p.featured_image, alt: gb_p.title, carga: 'lazy', widths: '160, 320', sizes: '64px', classe: 'gb-mini-img' -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- liquid
+          assign gb_desc = 0
+          if gb_ativa and gb_n >= section.settings.promo_qtd
+            assign gb_desc = gb_total | times: section.settings.promo_pct | divided_by: 100.0 | round
+          endif
+          assign gb_pagar = gb_total | minus: gb_desc
+        -%}
+        <article class="gb-set" {{ block.shopify_attributes }}>
+          {%- assign gb_img = block.settings.imagem | default: block.settings.imagem_reserva -%}
+          {%- if gb_img != blank -%}
+            <div class="gb-ph">
+              {%- render 'gb-imagem', imagem: gb_img, alt: block.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 50vw, 100vw' -%}
+            </div>
+          {%- endif -%}
+          <div class="gb-set-topo">
+            <h3 class="gb-h3">{{ block.settings.nome | escape }}</h3>
+            <p class="gb-set-preco">{%- if gb_desc > 0 -%}<s>{{ gb_total | money }}</s>{%- endif -%}{{ gb_pagar | money }}</p>
+          </div>
+          <p class="gb-small">{{ block.settings.descricao | default: gb_nomes | escape }}</p>
+          {%- if gb_n > 0 -%}
+            <form class="gb-set-pe" action="{{ routes.cart_add_url }}" method="post" data-gb-itens='[{{ gb_itens }}]'>
+              <div class="gb-minis">{{ gb_minis }}</div>
+              <input type="hidden" name="id" value="{{ gb_primeira }}">
+              <button type="submit" class="gb-btn gb-btn-p" data-gb-add-conjunto data-gb-texto="{{ section.settings.botao_texto | escape }}" data-gb-texto-ok="{{ section.settings.botao_ok | escape }}" aria-live="polite">{{ section.settings.botao_texto | escape }}</button>
+            </form>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: conjuntos",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Two sets, <em>ready to give.</em>" },
+    { "type": "text", "id": "botao_texto", "label": "Botão: texto", "default": "Add the set" },
+    { "type": "text", "id": "botao_ok", "label": "Botão: texto depois de adicionar", "default": "Added to your bag" },
+    { "type": "header", "content": "Oferta (use os mesmos valores nas outras seções)" },
+    { "type": "checkbox", "id": "promo_ativa", "label": "Promoção de 3 colares ativa (só ligue depois de criar o desconto automático e provar no carrinho)", "default": false },
+    { "type": "number", "id": "promo_pct", "label": "Desconto (%)", "default": 20 },
+    { "type": "range", "id": "promo_qtd", "label": "Peças para o desconto", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "type": "paragraph", "content": "O desconto em si é automático da loja (criado em Descontos). Aqui a página mostra só a estimativa." }
+  ],
+  "blocks": [
+    {
+      "type": "conjunto",
+      "name": "Conjunto",
+      "settings": [
+        { "type": "text", "id": "nome", "label": "Nome do conjunto", "default": "The Everyday Grace Set" },
+        { "type": "text", "id": "descricao", "label": "Descrição curta (vazio lista os nomes dos produtos)" },
+        { "type": "product", "id": "peca_1", "label": "Peça 1" },
+        { "type": "product", "id": "peca_2", "label": "Peça 2" },
+        { "type": "product", "id": "peca_3", "label": "Peça 3" },
+        { "type": "product", "id": "peca_4", "label": "Peça 4 (opcional)" },
+        { "type": "image_picker", "id": "imagem", "label": "Foto do conjunto" },
+        { "type": "image_picker", "id": "imagem_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Two fine gold cross necklaces layered on the collarbone" },
+        { "type": "paragraph", "content": "A foto própria de camadas ainda não existe. Enquanto a foto acima estiver vazia, aparece a foto reserva." }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Ofirelle: conjuntos",
+      "blocks": [{ "type": "conjunto" }, { "type": "conjunto" }]
+    }
+  ]
+}
+{% endschema %}

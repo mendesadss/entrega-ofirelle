@@ -1,0 +1,76 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-perguntas gb-sec{% if section.settings.fundo == 'linen' %} gb-linen{% endif %}" data-gb-secao="perguntas">
+  <div class="gb-wrap gb-in">
+    <div>
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+    </div>
+    <div class="gb-faq">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.so_com_promo and section.settings.promo_ativa != true -%}{%- continue -%}{%- endif -%}
+        <details{% if block.settings.so_celular %} class="gb-m"{% endif %} {% if section.settings.um_por_vez %}name="gb-faq-{{ section.id }}"{% endif %}{% if block.settings.aberta %} open{% endif %} {{ block.shopify_attributes }}>
+          <summary>
+            {{ block.settings.pergunta | escape }}
+            <span class="gb-mais">{% render 'gb-icone', nome: 'plus', tamanho: 18 %}</span>
+            <span class="gb-menos">{% render 'gb-icone', nome: 'minus', tamanho: 18 %}</span>
+          </summary>
+          <p>{{ block.settings.resposta | escape }}</p>
+        </details>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.contato_texto != blank -%}
+      <p class="gb-ask">{{ section.settings.contato_texto | escape }}{% if section.settings.contato_email != blank %} <a href="mailto:{{ section.settings.contato_email | escape }}">{{ section.settings.contato_email | escape }}</a>{% endif %}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: perguntas",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "fundo",
+      "label": "Fundo",
+      "options": [
+        { "value": "linen", "label": "Linho (home)" },
+        { "value": "cream", "label": "Creme (produto)" }
+      ],
+      "default": "linen"
+    },
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Good <em>to know.</em>" },
+    { "type": "checkbox", "id": "promo_ativa", "label": "Promoção de 3 colares ativa (mostra as perguntas marcadas como da promoção)", "default": false },
+    { "type": "checkbox", "id": "um_por_vez", "label": "Abrir uma pergunta por vez", "default": true },
+    { "type": "text", "id": "contato_texto", "label": "Frase de contato", "default": "Something else on your mind?" },
+    { "type": "text", "id": "contato_email", "label": "E-mail de contato", "default": "support@ofirelle.com" }
+  ],
+  "blocks": [
+    {
+      "type": "pergunta",
+      "name": "Pergunta",
+      "settings": [
+        { "type": "text", "id": "pergunta", "label": "Pergunta", "default": "How does Buy 3, save 20% work?" },
+        { "type": "textarea", "id": "resposta", "label": "Resposta", "default": "Add 3 necklaces to your bag and the 20% comes off automatically at checkout." },
+        { "type": "checkbox", "id": "so_com_promo", "label": "Mostrar só com a promoção ativa", "default": false },
+        { "type": "checkbox", "id": "so_celular", "label": "Mostrar só no celular", "default": false },
+        { "type": "checkbox", "id": "aberta", "label": "Começa aberta", "default": false }
+      ]
+    }
+  ],
+  "max_blocks": 14,
+  "presets": [
+    {
+      "name": "Ofirelle: perguntas",
+      "blocks": [
+        { "type": "pergunta", "settings": { "aberta": true, "so_com_promo": true } },
+        { "type": "pergunta", "settings": { "pergunta": "Where does it sit on the neck?", "resposta": "It closes with a lobster clasp and an extender chain, so it sits at the base of the neck or drops to the collarbone." } },
+        { "type": "pergunta", "settings": { "pergunta": "Can I return it?", "resposta": "Yes, within 30 days for a refund or exchange, unworn and in its original packaging." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

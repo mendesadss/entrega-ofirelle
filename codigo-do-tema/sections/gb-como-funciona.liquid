@@ -1,0 +1,96 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign gb_ativa = section.settings.promo_ativa
+  assign gb_pct = section.settings.promo_pct
+  assign gb_qtd = section.settings.promo_qtd
+  assign gb_p = section.settings.produto
+  assign gb_conta = ''
+  if gb_ativa and gb_p != blank
+    assign gb_preco = gb_p.selected_or_first_available_variant.price
+    assign gb_total = gb_preco | times: gb_qtd
+    assign gb_desc = gb_total | times: gb_pct | divided_by: 100.0 | round
+    assign gb_pagar = gb_total | minus: gb_desc
+    assign gb_cada = gb_pagar | times: 1.0 | divided_by: gb_qtd | round
+    assign gb_preco_fmt = gb_preco | money | escape
+    assign gb_cada_fmt = gb_cada | money | escape
+    assign gb_total_html = gb_total | money | escape | prepend: '<s>' | append: '</s>'
+    assign gb_pagar_html = gb_pagar | money | escape | prepend: '<strong>' | append: '</strong>'
+    assign gb_conta = section.settings.conta | escape | replace: '{qtd}', gb_qtd | replace: '{preco}', gb_preco_fmt | replace: '{total}', gb_total_html | replace: '{pagar}', gb_pagar_html | replace: '{cada}', gb_cada_fmt
+  endif
+-%}
+<section class="gb-root gb-como gb-sec" id="{{ section.settings.ancora | default: 'faith-set' }}" data-gb-secao="como-funciona">
+  <div class="gb-wrap">
+    <div class="gb-head gb-center" style="margin-bottom: 56px">
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+    </div>
+    <div class="gb-passos">
+      {%- for block in section.blocks -%}
+        <div class="gb-passo" {{ block.shopify_attributes }}>
+          {%- if block.settings.imagem != blank -%}
+            <div class="gb-ph">
+              {%- render 'gb-imagem', imagem: block.settings.imagem, alt: block.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 400px, 100vw' -%}
+            </div>
+          {%- endif -%}
+          {%- if block.settings.legenda != blank -%}<p class="gb-legenda">{{ block.settings.legenda | escape }}</p>{%- endif -%}
+          <div class="gb-passo-txt">
+            <span class="gb-num">{{ forloop.index | prepend: '0' }}</span>
+            <div>
+              <h3 class="gb-h3">{{ block.settings.titulo | escape | replace: '{pct}', gb_pct | replace: '{qtd}', gb_qtd }}</h3>
+              <p class="gb-small">{{ block.settings.texto | escape | replace: '{pct}', gb_pct | replace: '{qtd}', gb_qtd }}</p>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if gb_conta != blank -%}
+      <p class="gb-conta">{{ gb_conta }}</p>
+    {%- endif -%}
+    {%- if section.settings.botao_texto != blank -%}
+      <div class="gb-acao"><a href="{{ section.settings.botao_url | default: routes.all_products_collection_url }}" class="gb-btn gb-btn-p">{{ section.settings.botao_texto | escape }}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: como funciona",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "text", "id": "ancora", "label": "Âncora do link (sem #)", "default": "faith-set" },
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Build your faith set" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Three crosses. One for you, <em>two to give.</em>" },
+    { "type": "header", "content": "Oferta (use os mesmos valores nas outras seções)" },
+    { "type": "checkbox", "id": "promo_ativa", "label": "Promoção de 3 colares ativa (só ligue depois de criar o desconto automático e provar no carrinho)", "default": false },
+    { "type": "number", "id": "promo_pct", "label": "Desconto (%)", "default": 20 },
+    { "type": "range", "id": "promo_qtd", "label": "Peças para o desconto", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "type": "product", "id": "produto", "label": "Produto usado na conta (preço real)" },
+    { "type": "text", "id": "conta", "label": "Frase da conta ({qtd}, {preco}, {total}, {pagar}, {cada})", "default": "For example, {qtd} x {preco} = {total}. You pay {pagar}, about {cada} each." },
+    { "type": "header", "content": "Botão" },
+    { "type": "text", "id": "botao_texto", "label": "Texto", "default": "Start your set" },
+    { "type": "url", "id": "botao_url", "label": "Link" }
+  ],
+  "blocks": [
+    {
+      "type": "passo",
+      "name": "Passo",
+      "settings": [
+        { "type": "image_picker", "id": "imagem", "label": "Foto" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Gold cross necklace worn close to the neck" },
+        { "type": "text", "id": "legenda", "label": "Legenda da foto", "default": "For you" },
+        { "type": "text", "id": "titulo", "label": "Título ({qtd} e {pct} viram os valores da oferta)", "default": "Choose any {qtd}" },
+        { "type": "text", "id": "texto", "label": "Texto", "default": "Mix any 3 necklaces." }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Ofirelle: como funciona",
+      "blocks": [{ "type": "passo" }, { "type": "passo" }, { "type": "passo" }]
+    }
+  ]
+}
+{% endschema %}

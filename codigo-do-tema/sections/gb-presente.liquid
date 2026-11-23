@@ -1,0 +1,72 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- assign gb_img = section.settings.imagem | default: section.settings.imagem_reserva -%}
+<section class="gb-root gb-presente" data-gb-secao="presente">
+  <div class="gb-wrap gb-in">
+    <div class="gb-t">
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-lead">{{ section.settings.texto | escape }}</p>{%- endif -%}
+      <ul class="gb-occ">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.nome != blank -%}
+            <li {{ block.shopify_attributes }}><a href="{{ block.settings.url | default: routes.all_products_collection_url }}">{{ block.settings.nome | escape }}{% render 'gb-icone', nome: 'arrow', tamanho: 18 %}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+      {%- if section.settings.botao_texto != blank -%}
+        <a href="{{ section.settings.botao_url | default: routes.all_products_collection_url }}" class="gb-btn gb-btn-s">{{ section.settings.botao_texto | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- if gb_img != blank -%}
+      <div class="gb-box">
+        {%- render 'gb-imagem', imagem: gb_img, alt: section.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 521px, 100vw' -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: presente",
+  "tag": "section",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "A gift for her" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "For the days she <em>will remember.</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "Every necklace arrives gift-ready, with 30 days to return or exchange." },
+    { "type": "text", "id": "botao_texto", "label": "Botão: texto", "default": "Shop gifts" },
+    { "type": "url", "id": "botao_url", "label": "Botão: destino" },
+    { "type": "image_picker", "id": "imagem", "label": "Foto da caixa de presente aberta" },
+    { "type": "image_picker", "id": "imagem_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+    { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Gold cross necklace, gift-ready" },
+    { "type": "paragraph", "content": "A foto da caixa aberta ainda não existe. Enquanto estiver vazia, aparece a foto reserva." }
+  ],
+  "blocks": [
+    {
+      "type": "ocasiao",
+      "name": "Ocasião",
+      "settings": [
+        { "type": "text", "id": "nome", "label": "Nome", "default": "Baptism" },
+        { "type": "url", "id": "url", "label": "Link" }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Ofirelle: presente",
+      "blocks": [
+        { "type": "ocasiao", "settings": { "nome": "Baptism" } },
+        { "type": "ocasiao", "settings": { "nome": "First Communion" } },
+        { "type": "ocasiao", "settings": { "nome": "Confirmation" } },
+        { "type": "ocasiao", "settings": { "nome": "Mother's Day" } },
+        { "type": "ocasiao", "settings": { "nome": "Christmas" } },
+        { "type": "ocasiao", "settings": { "nome": "Birthday" } },
+        { "type": "ocasiao", "settings": { "nome": "For a Godmother" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

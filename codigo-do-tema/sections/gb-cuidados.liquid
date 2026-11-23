@@ -1,0 +1,47 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-cuidados" data-gb-secao="cuidados">
+  <div class="gb-wrap gb-in">
+    <div>
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+    </div>
+    <ol>
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}><span class="gb-num">{{ forloop.index | prepend: '0' }}</span><span>{{ block.settings.texto | escape }}</span></li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: cuidados",
+  "tag": "section",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Care" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Keep it <em>bright.</em>" }
+  ],
+  "blocks": [
+    {
+      "type": "dica",
+      "name": "Dica de cuidado",
+      "settings": [
+        { "type": "text", "id": "texto", "label": "Texto", "default": "Put it on after perfume and lotion." }
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {
+      "name": "Ofirelle: cuidados",
+      "blocks": [
+        { "type": "dica", "settings": { "texto": "Put it on after perfume and lotion." } },
+        { "type": "dica", "settings": { "texto": "Wipe it with a soft cloth." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

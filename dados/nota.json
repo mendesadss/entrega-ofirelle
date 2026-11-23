@@ -1,0 +1,17 @@
+{
+  "notas": {
+    "oferta": 1,
+    "pdp": 2.5,
+    "prova_confianca": 1.5,
+    "navegacao_busca": 3,
+    "carrinho_checkout": 2.5,
+    "mobile": 3,
+    "velocidade_tecnica": 3,
+    "marca_design": 3,
+    "retencao_pos_compra": null
+  },
+  "cobertura_pct": 95,
+  "nota_observada_0_100": 45.8,
+  "nota_completa": null,
+  "interpretacao": "Nota dos critérios observados, sempre lida junto com a cobertura. Não representa faturamento, lucro ou taxa de conversão."
+}

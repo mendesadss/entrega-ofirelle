@@ -1,0 +1,63 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-promessa gb-sec" data-gb-secao="promessa">
+  <div class="gb-wrap">
+    <div class="gb-head gb-center" style="margin-bottom: 56px"><h2 class="gb-h2">{{ section.settings.titulo }}</h2></div>
+    <div class="gb-promessa-grade">
+      {%- for block in section.blocks -%}
+        <div class="gb-prom" {{ block.shopify_attributes }}>
+          <span style="color: var(--gb-gold)">{% render 'gb-icone', nome: block.settings.icone, tamanho: 24 %}</span>
+          <div>
+            <h3 class="gb-h3">{{ block.settings.titulo | escape }}</h3>
+            <p class="gb-small">{{ block.settings.texto | escape }}</p>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: promessa",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Simple, and <em>in writing.</em>" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Promessa",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icone",
+          "label": "Ícone",
+          "options": [
+            { "value": "truck", "label": "Caminhão" },
+            { "value": "return", "label": "Devolução" },
+            { "value": "shield", "label": "Escudo" },
+            { "value": "gift", "label": "Presente" },
+            { "value": "heart", "label": "Coração" }
+          ],
+          "default": "truck"
+        },
+        { "type": "text", "id": "titulo", "label": "Título", "default": "Shipping" },
+        { "type": "text", "id": "texto", "label": "Texto", "default": "Processed in 1 to 3 business days, with tracking by email." }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Ofirelle: promessa",
+      "blocks": [
+        { "type": "item", "settings": { "icone": "truck", "titulo": "Shipping", "texto": "Processed in 1 to 3 business days, with tracking by email." } },
+        { "type": "item", "settings": { "icone": "return", "titulo": "30-day returns", "texto": "Refund or exchange, unworn and in its original packaging." } },
+        { "type": "item", "settings": { "icone": "shield", "titulo": "1-year warranty", "texto": "Covered against manufacturing defects." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,42 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'gb-loja.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign gb_v = product.selected_or_first_available_variant
+  assign gb_img = product.images[1] | default: product.featured_image
+  assign gb_nome = section.settings.nome_curto | default: product.title
+-%}
+{%- if product != blank -%}
+  <div class="gb-root gb-barra-fixa" id="gb-barra-fixa" data-gb-barra aria-hidden="true">
+    {%- if gb_img != blank -%}
+      {%- render 'gb-imagem', imagem: gb_img, alt: product.title, carga: 'lazy', widths: '100, 150, 200', sizes: '48px' -%}
+    {%- else -%}
+      <span></span>
+    {%- endif -%}
+    <div style="min-width:0">
+      <p>{{ gb_nome | escape }}</p>
+      <p style="font-weight:500">{{ gb_v.price | money }}</p>
+    </div>
+    {%- if product.available and gb_v.available -%}
+      <button type="button" class="gb-btn gb-btn-p" data-gb-barra-comprar tabindex="-1">{{ section.settings.botao | escape }}</button>
+    {%- else -%}
+      <button type="button" class="gb-btn gb-btn-p" disabled tabindex="-1">{{ section.settings.esgotado | escape }}</button>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Ofirelle: barra fixa",
+  "tag": "div",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "paragraph", "content": "Só aparece no celular, quando o botão de compra principal sai da tela." },
+    { "type": "text", "id": "nome_curto", "label": "Nome curto (vazio usa o nome do produto)", "default": "Petite Puffed Cross" },
+    { "type": "text", "id": "botao", "label": "Botão", "default": "Add to bag" },
+    { "type": "text", "id": "esgotado", "label": "Botão esgotado", "default": "Sold out" }
+  ],
+  "presets": [{ "name": "Ofirelle: barra fixa" }]
+}
+{% endschema %}

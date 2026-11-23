@@ -1,0 +1,17 @@
+{%- comment -%}
+  Imagem responsiva da Ofirelle.
+  Parâmetros: imagem (objeto de imagem), alt (texto reserva), carga ('lazy' padrão ou 'eager'), sizes, widths (padrão '400, 600, 800, 1200'), classe.
+  Não escreve nada se a imagem estiver vazia.
+{%- endcomment -%}
+{%- if imagem != blank -%}
+  {%- assign gb_alt = imagem.alt | default: alt | default: '' -%}
+  {%- assign gb_widths = widths | default: '400, 600, 800, 1200' -%}
+  {%- assign gb_sizes = sizes | default: '(min-width: 1100px) 33vw, 50vw' -%}
+  {%- assign gb_foco = imagem.presentation.focal_point | default: '50% 50%' -%}
+  {%- assign gb_estilo = gb_foco | prepend: 'object-position: ' -%}
+  {%- if carga == 'eager' -%}
+    {{ imagem | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', widths: gb_widths, sizes: gb_sizes, alt: gb_alt, class: classe, style: gb_estilo }}
+  {%- else -%}
+    {{ imagem | image_url: width: 1600 | image_tag: loading: 'lazy', widths: gb_widths, sizes: gb_sizes, alt: gb_alt, class: classe, style: gb_estilo }}
+  {%- endif -%}
+{%- endif -%}

@@ -1,0 +1,52 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-ocasioes gb-sec gb-linen" data-gb-secao="ocasioes">
+  <div class="gb-wrap">
+    <div class="gb-head"><h2 class="gb-h2">{{ section.settings.titulo }}</h2></div>
+    <div class="gb-grade4 gb-oc-faixa">
+      {%- for block in section.blocks -%}
+        {%- assign gb_img = block.settings.imagem | default: block.settings.imagem_reserva -%}
+        {%- if gb_img != blank and block.settings.nome != blank -%}
+          <a href="{{ block.settings.url | default: '#' }}" class="gb-oc" {{ block.shopify_attributes }}>
+            <div class="gb-ph">
+              {%- render 'gb-imagem', imagem: gb_img, alt: block.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 25vw, 260px' -%}
+            </div>
+            <span class="gb-oc-nome">{{ block.settings.nome | escape }}{% render 'gb-icone', nome: 'arrow', tamanho: 20 %}</span>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: ocasiões",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "For the days <em>she will remember.</em>" }
+  ],
+  "blocks": [
+    {
+      "type": "ocasiao",
+      "name": "Ocasião",
+      "settings": [
+        { "type": "text", "id": "nome", "label": "Nome", "default": "Baptism and First Communion" },
+        { "type": "url", "id": "url", "label": "Link" },
+        { "type": "image_picker", "id": "imagem", "label": "Foto" },
+        { "type": "image_picker", "id": "imagem_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Gold cross necklace worn with a ribbed top" },
+        { "type": "paragraph", "content": "Se a foto da ocasião ainda não foi feita, a foto reserva aparece no lugar. Sem nenhuma das duas, a ocasião não aparece." }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Ofirelle: ocasiões",
+      "blocks": [{ "type": "ocasiao" }, { "type": "ocasiao" }, { "type": "ocasiao" }, { "type": "ocasiao" }]
+    }
+  ]
+}
+{% endschema %}

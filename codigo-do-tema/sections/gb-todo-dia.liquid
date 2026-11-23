@@ -1,0 +1,60 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-todo-dia gb-sec" data-gb-secao="todo-dia">
+  <div class="gb-wrap">
+    <div class="gb-head"><h2 class="gb-h2">{{ section.settings.titulo }}</h2></div>
+    <div class="gb-mosaico">
+      {%- capture gb_principal -%}
+        {%- for block in section.blocks limit: 1 -%}
+          {%- assign gb_img = block.settings.imagem | default: block.settings.imagem_reserva -%}
+          {%- if gb_img != blank -%}
+            <div class="gb-ph" {{ block.shopify_attributes }}>
+              {%- render 'gb-imagem', imagem: gb_img, alt: block.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 50vw, 100vw' -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      {%- capture gb_lado -%}
+        {%- for block in section.blocks offset: 1 -%}
+          {%- assign gb_img = block.settings.imagem | default: block.settings.imagem_reserva -%}
+          {%- if gb_img != blank -%}
+            <div class="gb-ph" {{ block.shopify_attributes }}>
+              {%- render 'gb-imagem', imagem: gb_img, alt: block.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 50vw, 100vw' -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      {{ gb_principal }}
+      {%- if gb_lado != blank -%}<div class="gb-mosaico-lado">{{ gb_lado }}</div>{%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: todo dia",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Close to your heart, <em>every day.</em>" }
+  ],
+  "blocks": [
+    {
+      "type": "foto",
+      "name": "Foto (a 1ª é a grande, a 2ª e a 3ª ficam ao lado)",
+      "settings": [
+        { "type": "image_picker", "id": "imagem", "label": "Foto" },
+        { "type": "image_picker", "id": "imagem_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Gold cross necklace worn every day" }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Ofirelle: todo dia",
+      "blocks": [{ "type": "foto" }, { "type": "foto" }, { "type": "foto" }]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,48 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- assign gb_img = section.settings.imagem -%}
+<section class="gb-root gb-hero" data-gb-secao="hero">
+  <div class="gb-hero-txt">
+    <div>
+      {%- if section.settings.rotulo != blank -%}
+        <p class="gb-label"><span class="gb-fio" aria-hidden="true"></span>{{ section.settings.rotulo | escape }}</p>
+      {%- endif -%}
+      <h1 class="gb-display">{{ section.settings.titulo }}</h1>
+      {%- if section.settings.subtitulo != blank -%}
+        <p class="gb-hero-sub">{{ section.settings.subtitulo | escape }}</p>
+      {%- endif -%}
+      <div class="gb-hero-btns">
+        {%- if section.settings.botao_1_texto != blank -%}
+          <a href="{{ section.settings.botao_1_url | default: '#' }}" class="gb-btn gb-btn-p">{{ section.settings.botao_1_texto | escape }}</a>
+        {%- endif -%}
+        {%- if section.settings.botao_2_texto != blank -%}
+          <a href="{{ section.settings.botao_2_url | default: '#' }}" class="gb-btn gb-btn-s">{{ section.settings.botao_2_texto | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  <div class="gb-ph">
+    {%- render 'gb-imagem', imagem: gb_img, alt: section.settings.alt, carga: 'eager', sizes: '(min-width: 760px) 50vw, 100vw', widths: '600, 900, 1200, 1600' -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: capa",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Cross necklaces in gold" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título (use itálico na segunda parte)", "default": "A small cross, <em>close to your heart.</em>" },
+    { "type": "text", "id": "subtitulo", "label": "Subtítulo", "default": "Made to be worn every day and given with love." },
+    { "type": "image_picker", "id": "imagem", "label": "Foto" },
+    { "type": "text", "id": "alt", "label": "Texto alternativo da foto", "default": "Petite Puffed Cross Necklace worn at the base of the neck with a cream ribbed top" },
+    { "type": "header", "content": "Botões" },
+    { "type": "text", "id": "botao_1_texto", "label": "Botão principal: texto", "default": "Shop the Petite Puffed Cross" },
+    { "type": "url", "id": "botao_1_url", "label": "Botão principal: link" },
+    { "type": "text", "id": "botao_2_texto", "label": "Botão secundário: texto", "default": "Build your faith set" },
+    { "type": "url", "id": "botao_2_url", "label": "Botão secundário: link" }
+  ],
+  "presets": [{ "name": "Ofirelle: capa" }]
+}
+{% endschema %}

@@ -1,0 +1,489 @@
+{
+  "sections": {
+    "galeria_compra": {
+      "type": "gb-galeria-compra",
+      "blocks": {
+        "b1": {
+          "type": "peca_extra",
+          "settings": {
+            "produto": "sideways-cross-crystal-necklace"
+          }
+        },
+        "b2": {
+          "type": "peca_extra",
+          "settings": {
+            "produto": "infinity-cross-necklace"
+          }
+        },
+        "b3": {
+          "type": "aba",
+          "settings": {
+            "titulo": "Details",
+            "usar_descricao": false,
+            "texto": "A small, softly rounded gold cross that sits right at the base of your neck. A solid puffed shape with smooth edges, on a fine cable chain with a lobster clasp and extender."
+          }
+        },
+        "b4": {
+          "type": "aba",
+          "settings": {
+            "titulo": "Shipping and returns",
+            "usar_descricao": false,
+            "texto": "Processed in 1 to 3 business days, with tracking by email. Free US shipping over {frete}. Returns within 30 days for a refund or exchange, unworn and in its original packaging. 1-year warranty against manufacturing defects."
+          }
+        },
+        "b5": {
+          "type": "aba",
+          "settings": {
+            "titulo": "Care",
+            "usar_descricao": false,
+            "texto": "Put it on after perfume and lotion. Wipe it with a soft cloth."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "breadcrumb_url": "/collections/necklaces",
+        "url_trocar": "/collections/necklaces"
+      }
+    },
+    "beneficios": {
+      "type": "gb-beneficios",
+      "blocks": {
+        "b1": {
+          "type": "beneficio",
+          "settings": {
+            "icone": "cross",
+            "titulo": "A softly rounded cross",
+            "texto": "A solid puffed shape with smooth edges that catch the light."
+          }
+        },
+        "b2": {
+          "type": "beneficio",
+          "settings": {
+            "icone": "ruler",
+            "titulo": "Choker to collarbone",
+            "texto": "Adjust it with the extender."
+          }
+        },
+        "b3": {
+          "type": "beneficio",
+          "settings": {
+            "icone": "heart",
+            "titulo": "Easy to layer",
+            "texto": "Wear it alone or layered with other necklaces."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {}
+    },
+    "no_pescoco": {
+      "type": "gb-no-pescoco",
+      "settings": {
+        "imagem_a": "shopify://shop_images/petite-puffed-cross-necklace-2.jpg",
+        "imagem_b": "",
+        "imagem_b_reserva": "shopify://shop_images/petite-puffed-cross-necklace-3.jpg",
+        "alt_b": "Close-up of the puffed gold cross on champagne satin"
+      }
+    },
+    "detalhe": {
+      "type": "gb-detalhe",
+      "settings": {
+        "imagem_a": "shopify://shop_images/petite-puffed-cross-necklace-3.jpg",
+        "imagem_b": "",
+        "imagem_b_reserva": "shopify://shop_images/petite-puffed-cross-necklace-1.png",
+        "alt_b": "Petite Puffed Cross Necklace laid flat, with clasp and extender"
+      }
+    },
+    "medida": {
+      "type": "gb-medida",
+      "blocks": {
+        "b1": {
+          "type": "linha",
+          "settings": {
+            "nome": "Pendant",
+            "valor": ""
+          }
+        },
+        "b2": {
+          "type": "linha",
+          "settings": {
+            "nome": "Chain",
+            "valor": ""
+          }
+        },
+        "b3": {
+          "type": "linha",
+          "settings": {
+            "nome": "Clasp",
+            "valor": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {}
+    },
+    "conjunto": {
+      "type": "gb-conjunto",
+      "blocks": {
+        "b1": {
+          "type": "peca",
+          "settings": {
+            "produto": "petite-puffed-cross-necklace",
+            "marcada": true
+          }
+        },
+        "b2": {
+          "type": "peca",
+          "settings": {
+            "produto": "sideways-cross-crystal-necklace",
+            "marcada": true
+          }
+        },
+        "b3": {
+          "type": "peca",
+          "settings": {
+            "produto": "infinity-cross-necklace",
+            "marcada": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "imagem": "",
+        "imagem_reserva": "shopify://shop_images/layered-cross-crystal-necklace-2.png",
+        "alt": "Layered Cross Necklace with Crystal worn in two layers"
+      }
+    },
+    "presente": {
+      "type": "gb-presente",
+      "blocks": {
+        "b1": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Baptism",
+            "url": "/collections/gifts?filter.p.tag=baptism"
+          }
+        },
+        "b2": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "First Communion",
+            "url": "/collections/gifts?filter.p.tag=communion"
+          }
+        },
+        "b3": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Confirmation",
+            "url": "/collections/gifts?filter.p.tag=confirmation"
+          }
+        },
+        "b4": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Mother's Day",
+            "url": "/collections/gifts?filter.p.tag=mom"
+          }
+        },
+        "b5": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Christmas",
+            "url": "/collections/gifts?filter.p.tag=christmas"
+          }
+        },
+        "b6": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "Birthday",
+            "url": "/collections/gifts?filter.p.tag=birthday"
+          }
+        },
+        "b7": {
+          "type": "ocasiao",
+          "settings": {
+            "nome": "For a Godmother",
+            "url": "/collections/gifts?filter.p.tag=godmother"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ],
+      "settings": {
+        "botao_url": "/collections/gifts",
+        "imagem": "",
+        "imagem_reserva": "shopify://shop_images/sideways-cross-pearl-necklace-2.jpg",
+        "alt": "Sideways Cross Necklace with Pearl worn with a satin camisole"
+      }
+    },
+    "ophir": {
+      "type": "gb-ophir",
+      "settings": {
+        "estilo": "citacao",
+        "link_url": "/pages/our-story",
+        "imagem": "",
+        "imagem_reserva": "shopify://shop_images/enamel-cross-pendant-necklace-1.png",
+        "alt": "Enamel Cross Medallion Necklace in gold tone"
+      }
+    },
+    "selos": {
+      "type": "gb-selos",
+      "blocks": {
+        "b1": {
+          "type": "selo",
+          "settings": {
+            "icone": "truck",
+            "titulo": "Free US shipping over {frete}",
+            "texto": "Processed in 1 to 3 business days"
+          }
+        },
+        "b2": {
+          "type": "selo",
+          "settings": {
+            "icone": "return",
+            "titulo": "30-day returns",
+            "texto": "Refund or exchange"
+          }
+        },
+        "b3": {
+          "type": "selo",
+          "settings": {
+            "icone": "shield",
+            "titulo": "1-year warranty",
+            "texto": "Manufacturing defects"
+          }
+        },
+        "b4": {
+          "type": "selo",
+          "settings": {
+            "icone": "gift",
+            "titulo": "Gift-ready",
+            "texto": "Ready to give"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {}
+    },
+    "cuidados": {
+      "type": "gb-cuidados",
+      "blocks": {
+        "b1": {
+          "type": "dica",
+          "settings": {
+            "texto": "Put it on after perfume and lotion."
+          }
+        },
+        "b2": {
+          "type": "dica",
+          "settings": {
+            "texto": "Wipe it with a soft cloth."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {}
+    },
+    "perguntas": {
+      "type": "gb-perguntas",
+      "blocks": {
+        "b1": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Details",
+            "resposta": "A small, softly rounded gold cross that sits right at the base of your neck. A solid puffed shape with smooth edges, on a fine cable chain with a lobster clasp and extender.",
+            "aberta": false,
+            "so_celular": true
+          }
+        },
+        "b2": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Shipping and returns",
+            "resposta": "Processed in 1 to 3 business days, with tracking by email. Free US shipping over $50. Returns within 30 days for a refund or exchange, unworn and in its original packaging. 1-year warranty against manufacturing defects.",
+            "aberta": false,
+            "so_celular": true
+          }
+        },
+        "b3": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "How does Buy 3, get 20% off work?",
+            "resposta": "Add 3 necklaces to your bag and the 20% comes off automatically at checkout.",
+            "so_com_promo": true,
+            "aberta": true,
+            "so_celular": false
+          }
+        },
+        "b4": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Where does it sit on the neck?",
+            "resposta": "It closes with a lobster clasp and an extender chain, so it sits at the base of the neck or drops to the collarbone.",
+            "aberta": true,
+            "so_celular": false
+          }
+        },
+        "b5": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "What is it made of?",
+            "resposta": "Gold-tone stainless steel, with a fine cable chain.",
+            "aberta": false,
+            "so_celular": false
+          }
+        },
+        "b6": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "How long does shipping take?",
+            "resposta": "Orders are processed in 1 to 3 business days, with tracking by email. Delivery time shows at checkout. Free US shipping over $50.",
+            "aberta": false,
+            "so_celular": false
+          }
+        },
+        "b7": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Can I return it?",
+            "resposta": "Yes, within 30 days for a refund or exchange, unworn and in its original packaging.",
+            "aberta": false,
+            "so_celular": false
+          }
+        },
+        "b8": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Is there a warranty?",
+            "resposta": "Yes, 1 year against manufacturing defects.",
+            "aberta": false,
+            "so_celular": false
+          }
+        },
+        "b9": {
+          "type": "pergunta",
+          "settings": {
+            "pergunta": "Is it ready to give?",
+            "resposta": "Yes. Every necklace arrives gift-ready.",
+            "aberta": false,
+            "so_celular": false
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9"
+      ],
+      "settings": {
+        "fundo": "cream",
+        "rotulo": "Questions",
+        "titulo": "Before you <em>choose.</em>",
+        "um_por_vez": false
+      }
+    },
+    "avaliacoes": {
+      "type": "gb-avaliacoes",
+      "settings": {
+        "mostrar": false,
+        "botao_url": "#review"
+      }
+    },
+    "combine_com": {
+      "type": "gb-combine-com",
+      "blocks": {
+        "b1": {
+          "type": "produto",
+          "settings": {
+            "produto": "sideways-cross-crystal-necklace"
+          }
+        },
+        "b2": {
+          "type": "produto",
+          "settings": {
+            "produto": "infinity-cross-necklace"
+          }
+        },
+        "b3": {
+          "type": "produto",
+          "settings": {
+            "produto": "layered-cross-crystal-necklace"
+          }
+        },
+        "b4": {
+          "type": "produto",
+          "settings": {
+            "produto": "dove-cross-necklace"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {}
+    },
+    "barra_fixa": {
+      "type": "gb-barra-fixa",
+      "settings": {}
+    }
+  },
+  "order": [
+    "galeria_compra",
+    "beneficios",
+    "no_pescoco",
+    "detalhe",
+    "medida",
+    "conjunto",
+    "presente",
+    "ophir",
+    "selos",
+    "cuidados",
+    "perguntas",
+    "avaliacoes",
+    "combine_com",
+    "barra_fixa"
+  ]
+}

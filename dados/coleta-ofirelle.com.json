@@ -1,0 +1,291 @@
+{
+  "status": "bloqueado_429",
+  "url_final": "https://ofirelle.com/",
+  "tema": {
+    "nome": "Atelier",
+    "schema_name": "Atelier",
+    "theme_store_id": 3621,
+    "customizado": false
+  },
+  "apps": [],
+  "produtos": [
+    {
+      "handle": "petite-puffed-cross-necklace",
+      "titulo": "Petite Puffed Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/petite-puffed-cross-necklace-1.png?v=1794615188",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/petite-puffed-cross-necklace-2.jpg?v=1794615188",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/petite-puffed-cross-necklace-3.jpg?v=1794615188",
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "asymmetric-cross-necklace",
+      "titulo": "Asymmetric Double Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/asymmetric-cross-necklace-1.png?v=1794614975",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/asymmetric-cross-necklace-2.jpg?v=1794614975",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/asymmetric-cross-necklace-3.jpg?v=1794614975",
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "enamel-cross-pendant-necklace",
+      "titulo": "Enamel Cross Medallion Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/enamel-cross-pendant-necklace-1.png?v=1794614797",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/enamel-cross-pendant-necklace-2.jpg?v=1794614797",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/enamel-cross-pendant-necklace-3.jpg?v=1794614797",
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "double-cross-necklace",
+      "titulo": "Double Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/double-cross-necklace-1.png?v=1794614489",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/double-cross-necklace-2.jpg?v=1794614489",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/double-cross-necklace-3.jpg?v=1794614489",
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "sideways-cross-crystal-necklace",
+      "titulo": "Sideways Cross Necklace with Crystal",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/sideways-cross-crystal-necklace-1.png?v=1794614281",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/sideways-cross-crystal-necklace-2.jpg?v=1794614281",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/sideways-cross-crystal-necklace-3.jpg?v=1794614281",
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "sideways-cross-pearl-necklace",
+      "titulo": "Sideways Cross Pearl Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/sideways-cross-pearl-necklace-1.png?v=1794613907",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/sideways-cross-pearl-necklace-2.jpg?v=1794613212",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/sideways-cross-pearl-necklace-3.png?v=1794613212",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "infinity-cross-necklace",
+      "titulo": "Infinity Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/infinity-cross-necklace-1.png?v=1794612824",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/infinity-cross-necklace-2.png?v=1794612824",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/infinity-cross-necklace-3.png?v=1794612824",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "layered-cross-crystal-necklace",
+      "titulo": "Layered Cross Necklace with Crystal",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/layered-cross-crystal-necklace-1.png?v=1794612542",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/layered-cross-crystal-necklace-2.png?v=1794612542",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/layered-cross-crystal-necklace-3.png?v=1794612542",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "dove-cross-necklace",
+      "titulo": "Dove Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": 69.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/dove-cross-necklace-1.png?v=1794611995",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/dove-cross-necklace-2.png?v=1794611995",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/dove-cross-necklace-3.png?v=1794611995",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "baroque-pearl-toggle-necklace",
+      "titulo": "Baroque Pearl Toggle Necklace",
+      "preco_minimo": 44.99,
+      "preco_comparado": 79.99,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/baroque-pearl-toggle-necklace-1.png?v=1794610799",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/baroque-pearl-toggle-necklace-2.png?v=1794610799",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/1004/3238/0208/files/baroque-pearl-toggle-necklace-3.png?v=1794611441",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "imagens_total": 3
+    }
+  ],
+  "catalogo_truncado": false,
+  "colecoes": [],
+  "politicas": {},
+  "robots_bloqueia_products": false,
+  "observacoes": [
+    "HTTP 429 em /products/petite-puffed-cross-necklace; coleta interrompida sem nova tentativa"
+  ],
+  "coletado_em": "2026-11-15T16:02:59.526Z"
+}

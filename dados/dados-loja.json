@@ -1,0 +1,73 @@
+{
+ "lido_em": "2026-11-15, navegador do app (fetch dentro da página)",
+ "politicas_nativas_shopify": {
+  "/policies/privacy-policy": "200, texto padrão da Shopify, atualizado em 01/11/2026",
+  "/policies/refund-policy": "404",
+  "/policies/shipping-policy": "404",
+  "/policies/terms-of-service": "404",
+  "/policies/contact-information": "404"
+ },
+ "paginas_texto": {
+  "/pages/shipping-policy": "Shipping Policy. Free US shipping on orders over $50. Orders are processed in 1-3 business days and you receive tracking by email as soon as your package ships. Delivery times are shown at checkout.",
+  "/pages/refund-policy": "Refund Policy. 30-day returns for a refund or exchange on unworn items in original packaging. 1-year warranty against manufacturing defects. Email support@ofirelle.com with your order number.",
+  "/pages/terms-of-service": "Terms of Service. By using ofirelle.com you agree to these terms. Prices are in USD. Product photos show the real pieces; small variations may occur. Questions: support@ofirelle.com.",
+  "/pages/our-story": "Our Story. Ophir was the legendary land of gold in the Bible, where King Solomon's ships found gold and precious stones. Ofirelle carries that name as a promise: jewelry that feels precious, made to be worn every day and given with love.",
+  "/pages/contact": "Título 'Contato' (em português numa loja em inglês). Formulário Name, Email*, Phone, Comment, Submit. Sem e-mail, telefone, endereço ou nome da empresa visível.",
+  "/pages/about, /pages/faq": "404"
+ },
+ "colecoes": {
+  "faith": 9,
+  "necklaces": 10,
+  "earrings": 0,
+  "bracelets": 0,
+  "frontpage": 0
+ },
+ "home_texto": "Hero 'Timeless & Meaningful' + SHOP BESTSELLERS. 'The Faith Collection' (4 produtos), 'Necklaces' (os mesmos 4), cartões 'Earrings VIEW MORE' e 'Bracelets VIEW MORE' (coleções vazias), 'Build your own set SHOP NOW', faixa 'BUY 3, GET 20% OFF WITH CODE OFIR20', selos '1-YEAR WARRANTY Every piece is covered against defects', 'FAST US SHIPPING Free shipping on US orders over $50, with tracking by email', 'MADE TO BE WORN Stainless steel, nickel-free and hypoallergenic, finished by hand.'",
+ "menu": [
+  "Home",
+  "Faith",
+  "Necklaces",
+  "Earrings",
+  "Bracelets",
+  "Our Story"
+ ],
+ "rodape_links": [
+  "/pages/contact",
+  "/pages/shipping-policy",
+  "/pages/refund-policy",
+  "/pages/privacy-policy (link quebrado? existe /policies/privacy-policy)",
+  "/pages/terms-of-service"
+ ],
+ "produto_principal": {
+  "handle": "petite-puffed-cross-necklace",
+  "preco": 39.99,
+  "comparado": 69.99,
+  "variantes": [
+   "Gold"
+  ],
+  "sku": "OF-PPC-G",
+  "created_at": "2026-11-13",
+  "tags": [
+   "Cross",
+   "Faith",
+   "Gift",
+   "Gold",
+   "Minimalist",
+   "New",
+   "Puffed"
+  ],
+  "imagens": 3,
+  "descricao": "Gold-tone stainless steel, fine cable chain, lobster clasp with extender, perfect for layering, gift-ready, 30-day returns. Care: after perfume and lotion. Sem comprimento da corrente nem tamanho do pingente."
+ },
+ "catalogo": "10 produtos, todos colares, todos criados em 13/11/2026, 9 a US$ 39,99 comparado 69,99 e 1 a 44,99 comparado 79,99. 1 variante (Gold) cada, 3 fotos cada. Nenhum app de avaliação detectado.",
+ "carrinho": "Página /cart: item, quantidade, 'Taxes included. Discounts and shipping calculated at checkout.' (loja US: preço não inclui imposto), recomendados 'You may also like'. Sem barra de frete grátis, sem lembrete da promoção OFIR20.",
+ "checkout": "Abre normal, pagamento expresso presente (Shop Pay etc. não verificados), campo de e-mail com opt-in. Não preenchido nem finalizado.",
+ "produto_principal_pagina": {
+  "lido": "navegador do app, HTML do servidor",
+  "title_seo": "Gold Petite Puffed Cross Necklace | Ofirelle",
+  "meta_description": "Small, softly rounded gold cross on a fine adjustable chain. Gold-tone stainless steel, minimalist and timeless, an everyday faith necklace.",
+  "texto_na_ordem": "Nome, Gold, Sale price $39.99 Regular price $69.99, Add to cart (barra fixa), galeria 1/3, 'Taxes included.', Color Gold, Add to cart, descrição + 6 tópicos, Care, '✓ In stock, ready to ship ✓ Free US shipping over $50 ✓ 30-day returns', 'THE OFIRELLE STANDARD Stainless Steel · Nickel-Free · Hypoallergenic · Gift-Ready', aba Care ('Sterling silver can darken with time' numa peça de aço inoxidável: contradição), aba Shipping & Returns, You may also like.",
+  "falta": "comprimento da corrente, tamanho do pingente, foto no pescoço com escala (ver prints), avaliações (nenhum app), perguntas frequentes, promoção OFIR20 não aparece na página do produto",
+  "scripts_detectados": "nenhum app de avaliação; 1 menção a tiktok; sem fbq no HTML (pixel da Meta pode estar no web pixel da Shopify: sem dado)"
+ }
+}

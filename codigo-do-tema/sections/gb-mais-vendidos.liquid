@@ -1,0 +1,57 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+<section class="gb-root gb-mais-vendidos gb-sec" data-gb-secao="mais-vendidos" style="border-top: 1px solid var(--gb-line)">
+  <div class="gb-wrap">
+    <div class="gb-topo-linha gb-head">
+      <div><h2 class="gb-h2">{{ section.settings.titulo }}</h2></div>
+      {%- if section.settings.link_texto != blank -%}
+        <a href="{{ section.settings.link_url | default: routes.all_products_collection_url }}" class="gb-link">{{ section.settings.link_texto | escape }}</a>
+      {%- endif -%}
+    </div>
+    <div class="gb-grade4">
+      {%- for block in section.blocks -%}
+        {%- assign gb_p = block.settings.produto -%}
+        {%- if gb_p != blank -%}
+          {%- assign gb_img = block.settings.imagem | default: gb_p.featured_image -%}
+          <a href="{{ gb_p.url }}" class="gb-card" {{ block.shopify_attributes }}>
+            <div class="gb-ph">
+              {%- render 'gb-imagem', imagem: gb_img, alt: gb_p.title, carga: 'lazy', sizes: '(min-width: 1100px) 25vw, 50vw' -%}
+            </div>
+            <p class="gb-card-nome">{{ gb_p.title | escape }}</p>
+            <p class="gb-card-preco">{{ gb_p.price | money }}</p>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: mais vendidos",
+  "tag": "section",
+  "class": "gb-section",
+  "settings": [
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Small crosses, <em>worn close.</em>" },
+    { "type": "text", "id": "link_texto", "label": "Link: texto", "default": "Shop all necklaces" },
+    { "type": "url", "id": "link_url", "label": "Link: destino" }
+  ],
+  "blocks": [
+    {
+      "type": "produto",
+      "name": "Produto",
+      "settings": [
+        { "type": "product", "id": "produto", "label": "Produto" },
+        { "type": "image_picker", "id": "imagem", "label": "Foto (vazio usa a foto principal do produto)" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Ofirelle: mais vendidos",
+      "blocks": [{ "type": "produto" }, { "type": "produto" }, { "type": "produto" }, { "type": "produto" }]
+    }
+  ]
+}
+{% endschema %}

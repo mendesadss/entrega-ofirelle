@@ -1,0 +1,160 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'gb-loja.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign gb_ativa = section.settings.promo_ativa
+  assign gb_pct = section.settings.promo_pct
+  assign gb_minq = section.settings.promo_qtd
+  assign gb_img = section.settings.imagem | default: section.settings.imagem_reserva
+  assign gb_total = 0
+  assign gb_n = 0
+  assign gb_pecas_json = ''
+-%}
+{%- capture gb_pecas_html -%}
+  {%- for block in section.blocks -%}
+    {%- assign gb_p = block.settings.produto -%}
+    {%- if gb_p != blank and gb_p.available -%}
+      {%- assign gb_v = gb_p.selected_or_first_available_variant -%}
+      {%- assign gb_marcada = block.settings.marcada -%}
+      {%- if gb_marcada -%}
+        {%- assign gb_total = gb_total | plus: gb_v.price -%}
+        {%- assign gb_n = gb_n | plus: 1 -%}
+      {%- endif -%}
+      {%- capture gb_pj -%}{"id":{{ gb_v.id }},"price":{{ gb_v.price }}}{%- endcapture -%}
+      {%- if gb_pecas_json == blank -%}{%- assign gb_pecas_json = gb_pj -%}{%- else -%}{%- assign gb_pecas_json = gb_pecas_json | append: ',' | append: gb_pj -%}{%- endif -%}
+      <button type="button" role="checkbox" aria-checked="{{ gb_marcada }}" data-gb-peca="{{ gb_v.id }}" data-gb-preco="{{ gb_v.price }}" {{ block.shopify_attributes }}>
+        <span class="gb-pf">
+          {%- render 'gb-imagem', imagem: gb_p.featured_image, alt: gb_p.title, carga: 'lazy', widths: '300, 450, 600', sizes: '(min-width: 1100px) 190px, 150px' -%}
+          <span class="gb-chk">{% render 'gb-icone', nome: 'check', tamanho: 16 %}</span>
+        </span>
+        <span class="gb-pn">{{ gb_p.title | escape }}</span>
+        <span class="gb-pp">{{ gb_v.price | money }}</span>
+      </button>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- liquid
+  assign gb_desc = 0
+  if gb_ativa and gb_n >= gb_minq
+    assign gb_desc = gb_total | times: gb_pct | divided_by: 100.0 | round
+  endif
+  assign gb_pagar = gb_total | minus: gb_desc
+  assign gb_cada = 0
+  if gb_n > 0
+    assign gb_cada = gb_pagar | times: 1.0 | divided_by: gb_n | round
+  endif
+  assign gb_cada_fmt = gb_cada | money
+  assign gb_desc_fmt = gb_desc | money
+  assign gb_faltam = gb_minq | minus: gb_n
+-%}
+
+<section class="gb-root gb-conjunto" id="set" data-gb-secao="conjunto" data-gb-cart-add="{{ routes.cart_add_url }}.js" data-gb-cart-url="{{ routes.cart_url }}" data-gb-money="{{ shop.money_format | escape }}">
+  <div class="gb-wrap gb-in" data-gb-conjunto>
+    {%- if gb_img != blank -%}
+      <div class="gb-ph gb-big">
+        {%- render 'gb-imagem', imagem: gb_img, alt: section.settings.alt, carga: 'lazy', sizes: '(min-width: 1100px) 521px, 100vw' -%}
+      </div>
+    {%- endif -%}
+    <div class="gb-hd-wrap">
+      <div class="gb-pad">
+        {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+        <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+        {%- if section.settings.texto != blank -%}<p class="gb-lead" style="max-width: 520px">{{ section.settings.texto | escape | replace: '{pct}', gb_pct | replace: '{qtd}', gb_minq }}</p>{%- endif -%}
+      </div>
+    </div>
+    <div class="gb-set-box">
+      <p class="gb-set-name">{{ section.settings.nome_conjunto | escape }}</p>
+      <div class="gb-pieces" role="group" aria-label="{{ section.settings.nome_conjunto | escape }}">{{ gb_pecas_html }}</div>
+      <div class="gb-pad">
+        <div class="gb-sum">
+          <span class="gb-sum-l" data-gb-soma-rotulo>{%- if gb_n == 1 -%}{{ section.settings.rotulo_um | escape | replace: '{n}', gb_n }}{%- else -%}{{ section.settings.rotulo_varios | escape | replace: '{n}', gb_n }}{%- endif -%}</span>
+          <span class="gb-sum-p"><s data-gb-soma-riscado{% if gb_desc == 0 %} hidden{% endif %}>{{ gb_total | money }}</s><span data-gb-soma-pagar>{{ gb_pagar | money }}</span></span>
+        </div>
+        <p class="gb-sum-n" data-gb-soma-nota>
+          {%- if gb_desc > 0 -%}
+            {{ section.settings.nota_promo | escape | replace: '{cada}', gb_cada_fmt | replace: '{economia}', gb_desc_fmt }}
+          {%- elsif gb_ativa and gb_faltam > 0 -%}
+            {{ section.settings.nota_faltam | escape | replace: '{faltam}', gb_faltam | replace: '{pct}', gb_pct }}
+          {%- endif -%}
+        </p>
+        <div class="gb-set-cta">
+          <button type="button" class="gb-btn gb-btn-p" data-gb-conjunto-add{% if gb_n == 0 %} disabled{% endif %}>
+            {%- if gb_desc > 0 -%}{{ section.settings.botao_conjunto | escape }}{%- elsif gb_n == 1 -%}{{ section.settings.botao_um | escape }}{%- else -%}{{ section.settings.botao_varios | escape | replace: '{n}', gb_n }}{%- endif -%}
+            {{ ' · ' }}{{ gb_pagar | money }}
+          </button>
+          {%- if section.settings.link_texto != blank -%}
+            <a href="{{ section.settings.link_url | default: routes.all_products_collection_url }}" class="gb-link">{{ section.settings.link_texto | escape }}</a>
+          {%- endif -%}
+        </div>
+        <p class="gb-erro" role="alert" data-gb-erro hidden></p>
+      </div>
+    </div>
+    <script type="application/json" data-gb-dados>
+      {
+        "pecas": [{{ gb_pecas_json }}],
+        "promo": { "ativa": {{ gb_ativa | json }}, "pct": {{ gb_pct }}, "qtd": {{ gb_minq }} },
+        "textos": {
+          "rotuloUm": {{ section.settings.rotulo_um | json }},
+          "rotuloVarios": {{ section.settings.rotulo_varios | json }},
+          "notaPromo": {{ section.settings.nota_promo | json }},
+          "notaFaltam": {{ section.settings.nota_faltam | json }},
+          "botaoConjunto": {{ section.settings.botao_conjunto | json }},
+          "botaoUm": {{ section.settings.botao_um | json }},
+          "botaoVarios": {{ section.settings.botao_varios | json }},
+          "erro": {{ section.settings.erro | json }}
+        }
+      }
+    </script>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: conjunto pronto",
+  "tag": "div",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Build your faith set" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Three crosses. One for you, <em>two to give.</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto ({qtd} e {pct} viram os valores da oferta)", "default": "Any {qtd} necklaces take {pct}% off in your bag. Start with this one." },
+    { "type": "text", "id": "nome_conjunto", "label": "Nome do conjunto", "default": "The Everyday Grace Set" },
+    { "type": "image_picker", "id": "imagem", "label": "Foto grande (camadas no colo)" },
+    { "type": "image_picker", "id": "imagem_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+    { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Two fine gold cross necklaces layered on the collarbone" },
+    { "type": "paragraph", "content": "A foto própria de camadas ainda não existe. Enquanto a foto acima estiver vazia, aparece a foto reserva." },
+    { "type": "header", "content": "Oferta (use os mesmos valores nas outras seções)" },
+    { "type": "checkbox", "id": "promo_ativa", "label": "Promoção de 3 colares ativa (só ligue depois de criar o desconto automático e provar no carrinho)", "default": false },
+    { "type": "number", "id": "promo_pct", "label": "Desconto (%)", "default": 20 },
+    { "type": "range", "id": "promo_qtd", "label": "Peças para o desconto", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "type": "header", "content": "Textos" },
+    { "type": "text", "id": "rotulo_um", "label": "Total com 1 peça ({n})", "default": "{n} necklace" },
+    { "type": "text", "id": "rotulo_varios", "label": "Total com várias peças ({n})", "default": "{n} necklaces" },
+    { "type": "text", "id": "nota_promo", "label": "Nota com desconto ({cada}, {economia})", "default": "about {cada} each, you save {economia}" },
+    { "type": "text", "id": "nota_faltam", "label": "Nota quando faltam peças ({faltam}, {pct})", "default": "Add {faltam} more for {pct}% off" },
+    { "type": "text", "id": "botao_conjunto", "label": "Botão com o desconto", "default": "Add the set" },
+    { "type": "text", "id": "botao_um", "label": "Botão com 1 peça", "default": "Add to bag" },
+    { "type": "text", "id": "botao_varios", "label": "Botão com várias peças ({n})", "default": "Add {n} necklaces" },
+    { "type": "text", "id": "link_texto", "label": "Link: texto", "default": "Choose your own 3" },
+    { "type": "url", "id": "link_url", "label": "Link: destino" },
+    { "type": "text", "id": "erro", "label": "Erro ao adicionar", "default": "We could not add this to your bag. Please try again." }
+  ],
+  "blocks": [
+    {
+      "type": "peca",
+      "name": "Peça do conjunto",
+      "limit": 6,
+      "settings": [
+        { "type": "product", "id": "produto", "label": "Produto" },
+        { "type": "checkbox", "id": "marcada", "label": "Começa marcada", "default": true }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ofirelle: conjunto pronto",
+      "blocks": [{ "type": "peca" }, { "type": "peca" }, { "type": "peca" }]
+    }
+  ]
+}
+{% endschema %}

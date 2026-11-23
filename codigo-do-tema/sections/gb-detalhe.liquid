@@ -1,0 +1,51 @@
+{{ 'gb-loja.css' | asset_url | stylesheet_tag }}
+
+{%- assign gb_b = section.settings.imagem_b | default: section.settings.imagem_b_reserva -%}
+<section class="gb-root gb-detalhe" data-gb-secao="detalhe">
+  <div class="gb-wrap gb-in">
+    <div class="gb-t">
+      {%- if section.settings.rotulo != blank -%}<p class="gb-label">{{ section.settings.rotulo | escape }}</p>{%- endif -%}
+      <h2 class="gb-h2">{{ section.settings.titulo }}</h2>
+      {%- if section.settings.texto != blank -%}<p class="gb-lead">{{ section.settings.texto | escape }}</p>{%- endif -%}
+    </div>
+    <div class="gb-pair">
+      {%- if section.settings.imagem_a != blank -%}
+        <figure>
+          <div class="gb-ph">{%- render 'gb-imagem', imagem: section.settings.imagem_a, alt: section.settings.alt_a, carga: 'lazy', sizes: '(min-width: 1100px) 410px, 100vw' -%}</div>
+          {%- if section.settings.legenda_a != blank -%}<figcaption>{{ section.settings.legenda_a | escape }}</figcaption>{%- endif -%}
+        </figure>
+      {%- endif -%}
+      {%- if gb_b != blank -%}
+        <figure>
+          <div class="gb-ph">{%- render 'gb-imagem', imagem: gb_b, alt: section.settings.alt_b, carga: 'lazy', sizes: '(min-width: 1100px) 410px, 100vw' -%}</div>
+          {%- if section.settings.legenda_b != blank -%}<figcaption>{{ section.settings.legenda_b | escape }}</figcaption>{%- endif -%}
+        </figure>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofirelle: detalhe",
+  "tag": "section",
+  "class": "gb-section",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "rotulo", "label": "Rótulo pequeno", "default": "Up close" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Rounded, so it <em>catches the light.</em>" },
+    { "type": "textarea", "id": "texto", "label": "Texto", "default": "Smooth edges, on a fine cable chain with a lobster clasp." },
+    { "type": "header", "content": "Foto 1: o pingente" },
+    { "type": "image_picker", "id": "imagem_a", "label": "Foto" },
+    { "type": "text", "id": "alt_a", "label": "Texto alternativo", "default": "Close-up of the puffed gold cross pendant on champagne satin" },
+    { "type": "text", "id": "legenda_a", "label": "Legenda", "default": "The pendant" },
+    { "type": "header", "content": "Foto 2: o fecho" },
+    { "type": "image_picker", "id": "imagem_b", "label": "Foto própria (macro do fecho lagosta e da corrente extensora)" },
+    { "type": "image_picker", "id": "imagem_b_reserva", "label": "Foto reserva (usada enquanto a foto acima estiver vazia)" },
+    { "type": "text", "id": "alt_b", "label": "Texto alternativo", "default": "Petite Puffed Cross Necklace laid flat, with clasp and extender chain" },
+    { "type": "text", "id": "legenda_b", "label": "Legenda", "default": "The clasp" },
+    { "type": "paragraph", "content": "A macro do fecho ainda não existe. Enquanto estiver vazia, aparece a foto reserva." }
+  ],
+  "presets": [{ "name": "Ofirelle: detalhe" }]
+}
+{% endschema %}

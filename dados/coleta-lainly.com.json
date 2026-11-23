@@ -1,0 +1,2139 @@
+{
+  "status": "bloqueado_429",
+  "url_final": "https://lainly.com/",
+  "tema": {
+    "nome": "Lainly™ Official",
+    "schema_name": "Horizon",
+    "theme_store_id": 2481,
+    "customizado": false
+  },
+  "apps": [
+    {
+      "dominio": "klaviyo.com",
+      "app": "Klaviyo"
+    }
+  ],
+  "produtos": [
+    {
+      "handle": "welcome-gift-box",
+      "titulo": "Gift Box",
+      "preco_minimo": 3.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": null,
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/lainly-gift-box-pearl-cross_fafda263-5679-4a36-855a-dc5df1e677b6.webp?v=1794483539",
+          "width": 1420,
+          "height": 1420
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gift-box-real_3a2af7ba-e6ce-469a-815a-a68c1caa02a4.webp?v=1794483540",
+          "width": 1886,
+          "height": 1886
+        }
+      ],
+      "imagens_total": 2
+    },
+    {
+      "handle": "gift-box",
+      "titulo": "Gift Box",
+      "preco_minimo": 3.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": null,
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/lainly-gift-box-pearl-cross.webp?v=1794013625",
+          "width": 1420,
+          "height": 1420
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gift-box-real.webp?v=1793970463",
+          "width": 1886,
+          "height": 1886
+        }
+      ],
+      "imagens_total": 2
+    },
+    {
+      "handle": "sideways-cross-bracelet",
+      "titulo": "Sideways Cross Bracelet",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Bracelet",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroSidewaysBracelet_4a6edd91-68dd-4ae9-9dcd-adc7a5fa219c.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSidewaysBracelet_c3be66d0-87a8-4ffd-ac1c-bc994afbc4f3.webp?v=1790964287",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSidewaysBracelet_9dcbd6a2-bf71-47fd-9aac-a4dc866f2307.webp?v=1790964287",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverSidewaysBracelet_631294f1-6cb0-494e-ad36-cff8a035d5ef.webp?v=1790964287",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverSidewaysBracelet_d969dbcc-5676-475c-896a-3ab4ae301197.webp?v=1790964287",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "birthstone-cross-necklace",
+      "titulo": "Birthstone Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 24,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NeoSaints__1.gif?v=1774266277",
+          "width": 1440,
+          "height": 1440
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/Birthstones_Neosaints.png?v=1774266277",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_c8653250-bf29-4ff4-8dea-53b649d7c5fb.png?v=1774266277",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_adfec27b-61dd-44c5-b3d8-5a4e66474661.png?v=1774266278",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_a0890d2e-fab1-4e94-8eaa-8995ee5a7015.png?v=1774266278",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 10
+    },
+    {
+      "handle": "wrapped-cross-ring",
+      "titulo": "Wrapped Cross Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_cf589e14-8f4d-448c-866f-9b9e13063c99.png?v=1774266630",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_fd39c534-c285-4785-8c39-964a9737120c.png?v=1774266631",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_77067ecc-6f40-4e91-a382-02fe15038811.png?v=1774266630",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_d0e66e85-4999-4694-8f47-2cf12989e88f.png?v=1774266631",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_894de4a3-9bb3-4291-a1e5-b025ac2598f8.png?v=1774266631",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "white-cross-bracelet",
+      "titulo": "White Cross Bracelet",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Bracelet",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_214d9db4-0dd5-449a-91fd-78430ba3bff0.png?v=1774266627",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_192aaf7a-a26b-482b-80fb-c83fd94a6e68.png?v=1774266626",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_29f4adc2-d7f1-4efb-9f28-76a5cc6ac9f6.png?v=1774266627",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_9a017b89-f1d2-4199-b08c-506a73b84a69.png?v=1774266627",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 4
+    },
+    {
+      "handle": "two-tone-cross-necklace",
+      "titulo": "Two Tone Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_1_-gigapixel-standardv2-2x_3a44c5ee-b4f6-4dcd-966c-b915036c92c0.jpg?v=1774266621",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_016285d7-cdd9-4273-8d27-82e71e5b1228.jpg?v=1774266621",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_6e01cc3f-8b9f-4d00-a2a9-5caad1e6953c.png?v=1774266622",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_6f109463-0028-4ced-9385-3b4f97d7670b.png?v=1774266622",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_af4436b6-df47-4867-8192-7b6fb37475d6.png?v=1774266623",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "twisted-cross-necklace",
+      "titulo": "Twisted Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_210e3f7e-6806-458b-8d60-d117a63c93cc.jpg?v=1774266616",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_1_-gigapixel-standardv2-2x_b2ff9b9a-3dde-4860-bba7-743b62d8b3dc.jpg?v=1774266616",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_23eb00d3-ccbb-4a84-9cba-a6c46a79e0bc.png?v=1774266616",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_a3e24f03-1666-407a-b295-213ca6e5515a.png?v=1774266617",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_e81ff7d1-cfdc-4268-a026-4116c3e43c60.png?v=1774266617",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "twin-cross-necklace",
+      "titulo": "Twin Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_67377f55-7a86-4900-a121-06ee6da72d33.png?v=1774266611",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_d9d7c103-8e09-434f-9500-dd9896995052.png?v=1774266611",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_aded64ad-d715-473e-a873-35e761478183.png?v=1774266612",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_1472ded9-7990-4dad-9dba-7781690f950b.png?v=1774266612",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_12b6f4f5-d839-4688-9ba3-386047e93aa4.png?v=1774266612",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "triple-charm-cross-necklace",
+      "titulo": "Triple Charm Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_c33b8dff-21e6-4c28-9d4b-b9e166ca6c1e.png?v=1774266606",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_aa59aec0-3f45-4856-8ade-f1527ce7634b.png?v=1774266607",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_e286739c-3121-47fb-a280-70ab0e0183b4.png?v=1774266607",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_5d6f98f2-bcc5-43fc-bec0-a95897789281.png?v=1774266608",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_97d0b04d-eaef-4528-9135-c5b76d79f880.png?v=1774266607",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "touch-of-god-ring",
+      "titulo": "Touch of God Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_bc175411-00d0-4556-aece-c3596e96eb49.png?v=1774266600",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_1f639a1e-0eaa-4268-92bd-e2c7582e87ce.png?v=1774266600",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_37b3948e-95f1-4761-b399-f9a451cedd7f.png?v=1774266600",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_ccd0e529-7b1d-4082-b743-8a9e26dc20d3.png?v=1774266600",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_4a176ada-b2c7-460e-b808-581cc7d0346b.png?v=1774266600",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 8
+    },
+    {
+      "handle": "tiny-cross-studs",
+      "titulo": "Tiny Cross Studs",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_c80c5a5a-6436-447e-aa5e-70d5cee82c9c.png?v=1774266595",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_aa3bc6ec-4f82-43b9-b46d-fae526e3551a.png?v=1774266595",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_6825be11-23c4-42e7-86d6-b740ec4a628c.png?v=1774266595",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_758a9a6d-e656-47ec-a68a-a6aa08cd602b.png?v=1774266595",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-2_1712ef9e-2fd7-4f12-9389-bde7c2f29dbb.png?v=1774266597",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "starlight-hoops",
+      "titulo": "Starlight Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_e2bdbc54-c556-4ea1-a692-120463354d9f.png?v=1774266590",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_5cc8232a-a0dd-4b66-8aa0-7e7a9ea4da58.png?v=1774266590",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_7faf829d-7fa5-4e96-b5e9-ee592b0a4b80.png?v=1774266590",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_392f7784-d6c2-491b-87c7-134bba81e05f.png?v=1774266590",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-1_6f48e496-3bea-4e0d-b065-515b5f7e5c58.png?v=1774266592",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "shell-cross-necklace",
+      "titulo": "Shell Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_6be03219-4efe-47d0-8738-115f10882a88.png?v=1774266582",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_4a5048c5-2a91-4e45-8b76-aedb8c8667de.png?v=1774266582",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_3803010c-bc07-4bab-a22a-94d694ef36ce.png?v=1774266582",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_45cb788c-3539-47a9-9804-e3b6723fec70.png?v=1774266582",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/4_a41b1733-0f2e-48ca-8058-64169abbae34.png?v=1774266583",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 8
+    },
+    {
+      "handle": "saint-benedict-necklace",
+      "titulo": "Saint Benedict Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_cd01d2bd-5aeb-469d-b90c-b493daa2c155.png?v=1774266566",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_6c312d8d-d2c6-4057-8ed5-1bd939b21092.png?v=1774266567",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_0fbc7f2f-9052-4d71-9539-3bfdfe870158.png?v=1774266566",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-4_20d85e20-a073-458d-9027-8e697820db0f.png?v=1774266568",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_2f6e2beb-426c-4ea1-a98e-3aecccda1772.png?v=1774266567",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "radiant-cross-necklace",
+      "titulo": "Radiant Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_63fd6113-cf86-4314-b0e6-e804c708112e.jpg?v=1774266557",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_9bc05789-61a9-437d-8f36-ca21bb316d71.png?v=1774266558",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_bd36bade-fb80-4c01-9c63-4c15208a713c.png?v=1774266558",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_21e527a9-0011-444d-8c68-c7aecd11e6f7.png?v=1774266559",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/4_a5e43d61-edc7-4010-b332-c3c3949fd50d.png?v=1774266559",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "prism-cross-necklace",
+      "titulo": "Prism Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_3df65f3e-45a1-4d56-97a2-2a58b3c68ec1.jpg?v=1774266553",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_1_-gigapixel-standardv2-2x_06380221-5353-45ff-9f1c-ec58fe8266d7.jpg?v=1774266553",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_6791452f-1334-4272-a412-983dd093de16.png?v=1774266554",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_75623b8a-aa1e-4273-abd4-e0094ff4c20b.png?v=1774266554",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_153e4d0d-9082-4500-87ed-d2b8b82f6eda.png?v=1774266555",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "pearl-cross-earrings",
+      "titulo": "Pearl Cross Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/hf_20260923_193054_2c75fae7-960e-43f1-be17-55dc65d9459f.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_b2bac137-1b65-472a-9921-0f820791ee73.png?v=1774266549",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_99f85b25-2beb-446b-893b-b9908e5a2cd6.png?v=1774266549",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/il_1140xN.6800268136_hq89.webp?v=1774266549",
+          "width": 1140,
+          "height": 1140
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-2_8b419854-4829-44df-bea8-71f2a3c7a645.png?v=1774266550",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "orange-cross-bracelet",
+      "titulo": "Orange Cross Bracelet",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Bracelet",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1f0324b6-e438-4541-bf30-fc02345fd517.png?v=1774266535",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_3499c890-567c-4323-a355-3a5f073ca743.png?v=1774266535",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_db16d3d6-1c29-4fdb-a2a4-81ffacf114f7.png?v=1774266535",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_697de304-335c-493d-98d8-6b2cd2dc3088.png?v=1774266536",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 4
+    },
+    {
+      "handle": "moving-mountains-necklace",
+      "titulo": "Moving Mountains Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_b20bb9eb-4570-4483-9695-cc7325d8e094.png?v=1774266526",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_5496d7d8-3fed-424d-84d7-6561c7378833.png?v=1774266525",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_6ea37111-c19d-47ee-acbe-415bfa326b83.png?v=1774266526",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_14f1d4b1-3609-43b9-ad9d-a00487cfc8ca.png?v=1774266526",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 4
+    },
+    {
+      "handle": "mossanite-signature-cross-necklace",
+      "titulo": "Signature Moissanite Cross Necklace",
+      "preco_minimo": 119.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/Neo_Saints_b35b3f29-29d1-4a76-87ab-e447c4c2fdab.jpg?v=1774266519",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/Neo_Saints_1_afc26386-9af1-4c0e-9a06-24593e07b204.jpg?v=1774266519",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_1360e44a-be23-420f-a2fb-523a8125679e.png?v=1774266520",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_03f36bea-16d7-455f-99de-297d05d5671a.png?v=1774266520",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_c97b854c-ef2b-4a13-aeff-91bbede183d9.png?v=1774266520",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 8
+    },
+    {
+      "handle": "mossanite-cross-necklace",
+      "titulo": "Moissanite Cross Necklace",
+      "preco_minimo": 109.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/Neo_Saints_6fd41878-49ed-4946-867d-db901162742d.jpg?v=1774266513",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/Neo_Saints_1_ec5a2bfa-2674-408f-90fe-f03add61ae38.jpg?v=1774266513",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_ecbbb070-9122-4d00-8f22-4806a277f9f8.png?v=1774266514",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_feb923f8-e0c0-4e95-968b-ca242390e0f8.png?v=1774266514",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_37c3cef0-095d-4d0d-b3f0-6bbc0db0b222.png?v=1774266515",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 7
+    },
+    {
+      "handle": "mini-cross-hoops",
+      "titulo": "Mini Cross Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_61bcd3d5-e6ef-427d-8241-18555fd94a0e.jpg?v=1774266503",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_1_-gigapixel-standardv2-2x_b2c580ce-5ff1-4bb5-b2d6-85d0d5b9033c.jpg?v=1774266504",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_cae91b23-3eed-4ca1-bfdb-61c4a9741e6e.png?v=1774266505",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_a9a87ce0-6511-4418-98de-16d7cbee1bdc.png?v=1774266504",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_58771463-7e61-45ca-b87a-f1b9fa74e438.png?v=1774266505",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "layered-cross-necklace",
+      "titulo": "Layered Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-Neo_Saints_75d18706-1bcc-45a8-9b90-e6d7d4014a60.png?v=1774266499",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-Neo_Saints_1_ef7351c7-3e7e-454a-af98-bec1b5c662bf.png?v=1774266500",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_b0dde137-0dcd-45a0-9d77-c47732b8cd0f.png?v=1774266499",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_64a4aa2a-3b5a-4507-9661-f0c1c05935a5.png?v=1774266500",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-3_791421d0-3597-48fc-aa88-016a8fb7f1b9.png?v=1774266501",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "jesus-necklace",
+      "titulo": "Jesus Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_7a2bc5b3-7ff2-49d7-b460-4e1629b20e78.png?v=1774266494",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_a7cc6717-148c-43c3-8f3f-d9b5179095a5.png?v=1774266494",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_c00bb303-4f9d-4c88-a643-d52d4cc5dbcd.png?v=1774266494",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_8f9520d3-7550-4a2c-8223-c4e55af767fd.png?v=1774266494",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_b26af5e9-9c9a-4d7d-8e7a-38397ff223ae.png?v=1774266495",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "jesus-fish-ring",
+      "titulo": "Jesus Fish Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 10,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_edc52bbf-9877-44ee-8b7a-3479fd604d15.png?v=1774266489",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_8bc62a6c-36d4-4dae-be2b-a355cb0e6383.png?v=1774266489",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_6211930a-eba4-4e8b-ab22-a09898b9853a.png?v=1774266489",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_982f1ea7-cc1c-4155-82c9-555be1a8857f.png?v=1774266490",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_db3a23d6-d5da-4bf4-ae51-fff516afe4c6.png?v=1774266490",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "sideways-cross-necklace",
+      "titulo": "Sideways Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroSidwaysNecklace_853d6a8d-071e-4cc3-9ae0-43caea569906.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSidewaysNecklace30YO.webp?v=1790203847",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSidewaysNecklace_b2b92c9f-cd92-491d-96fa-19394379e7af.webp?v=1790191138",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverSidewaysNecklace30YO.webp?v=1790203847",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverSidewaysNecklace.webp?v=1790192638",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "infinity-necklace",
+      "titulo": "Infinity Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_81b5f7ec-f0cc-4c69-bda6-dce5a244cb21.png?v=1774266460",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_a542c04d-5c65-48d8-b56a-e8a2f243a067.png?v=1774266461",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-2_d88476e5-cd30-46cc-8680-22b3c16cb960.png?v=1774266461",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_31bf10f5-e151-4dc7-9e8d-cb44c430d3ed.png?v=1774266461",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/4_4eb361d1-8e70-49c6-858e-69c50b4cc601.png?v=1774266462",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "hollow-cross-ring",
+      "titulo": "Hollow Cross Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 10,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_7c303f8c-53a9-470c-bbeb-8a62bd6498f7.png?v=1774266450",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_1125077a-a3ee-4d52-a425-c36c254e23d0.png?v=1774266451",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_743d62f6-a6d8-4b8e-8655-46a0b1bf23e0.png?v=1774266451",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_71a01c50-1a1f-4c48-af53-633590d195f5.png?v=1774266451",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_9b0d768e-16a6-4767-a75d-b5365f997463.png?v=1774266451",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "highs-lows-ring",
+      "titulo": "Highs & Lows Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 8,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_feb0bd1c-3b91-4fd5-beb7-903e601e6f2e.png?v=1774266445",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_b0308279-426a-4c62-b54f-1ab957e83f3f.png?v=1774266445",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_4d4efca7-928a-47ca-a66c-026545f5a945.png?v=1774266445",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_79e3b4a4-227a-4120-ae36-1cff912a0b46.png?v=1774266445",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_b617b86e-deb3-4f1e-97e2-748577c71ea2.png?v=1774266446",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "heart-earrings",
+      "titulo": "Heart Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_45dd6e31-bf6e-49fd-a076-570ad2e945ad.png?v=1774266440",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_c22b21eb-ef79-4f93-8eb0-34d33122fd5e.png?v=1774266440",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_5c55fbfa-0919-40ee-bcc9-1808e1c24053.png?v=1774266440",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_190edfa4-2762-473a-9fff-37e92eefcea8.png?v=1774266441",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_f99980a2-a1e1-451b-ac75-b481dabeabd2.png?v=1774266441",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "heart-cross-necklace",
+      "titulo": "Heart Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_5d3d17da-6fdb-4ad4-8a5f-fff6cf156626.png?v=1774266436",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_ef0d48fc-0029-46de-bd62-9c33b461b126.png?v=1774266436",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_ceac046c-c24c-4437-be03-41b8b9375c07.png?v=1774266437",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_6f73ba59-421e-41d9-842e-63f2dd73c27b.png?v=1774266437",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 4
+    },
+    {
+      "handle": "halo-pearl-necklace",
+      "titulo": "Halo Pearl Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_af22de79-f2d4-4c6a-a63c-ba69c64bd265.png?v=1774266431",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_196b8e97-0159-46fe-ab52-02bece85ed46.png?v=1774266430",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/8_5e03b158-cfb3-4a04-9241-bf3c9ce2dde3.png?v=1774266431",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_2d49ee49-b743-4c2e-9ba5-6d8d74d8707e.png?v=1774266431",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-4_145ab432-db88-40f5-85bc-87ecb0917129.png?v=1774266432",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 8
+    },
+    {
+      "handle": "grace-hoops",
+      "titulo": "Grace Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_50173b43-d841-42de-bd98-120164f41c20.png?v=1774266425",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_e4510518-5cde-49cf-a405-210ddaf51882.png?v=1774266425",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_a16c29c9-6b74-4e1b-8dce-ec1c5423eb2f.png?v=1774266425",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_2aa09bb5-3177-4af4-b0a3-70f72d43cf33.png?v=1774266425",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_a52d1e9c-de32-4e8c-a0c7-03526c16a1a0.png?v=1774266426",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 7
+    },
+    {
+      "handle": "gold-cross-bracelet",
+      "titulo": "Gold Cross Bracelet",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Bracelet",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_de362ba5-f928-4ba7-9d4b-7556c7bcb9a4.png?v=1774266421",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_1df50d82-4469-4084-9932-6dc6b6424297.png?v=1774266422",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_e88d05ee-15a5-4354-82fb-59e09131b0ce.png?v=1774266422",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_f1d2965f-ce83-4e51-a65f-1f848b9e8ab1.png?v=1774266422",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 4
+    },
+    {
+      "handle": "faith-over-fear-ring",
+      "titulo": "Faith Over Fear Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_906ab4bb-cc66-47d7-9d48-e3a6ceef726e.png?v=1774266412",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_aaadc490-87ad-40a6-8cb7-049912fc8b80.png?v=1774266412",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_35506ac0-d28b-4789-8a33-dd12fda82894.png?v=1774266412",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_0a7d8ab7-7503-4c69-a983-f915d7111222.png?v=1774266412",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_58790c02-134e-4bd3-a559-d4f5ad5ecba4.png?v=1774266413",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "faith-cross-necklace",
+      "titulo": "Faith Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroFaithNecklace.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleFaithNecklace30YO.webp?v=1790204138",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceFaithNecklace.webp?v=1790191059",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSIlverFaithNecklace30YO.webp?v=1790204138",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverFaithNecklace.webp?v=1790191059",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "eternity-cross-necklace",
+      "titulo": "Eternity Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_f8e7883c-3361-48d3-b775-6f318d49514f.jpg?v=1774266400",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_1_-gigapixel-standardv2-2x_c3e71a7d-b9e7-4e15-9ba5-c334991238cc.jpg?v=1774266401",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_e84be419-7a34-4c76-8fc0-760793e01044.png?v=1774266401",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_8bbb40a5-b3f0-40ef-b082-c82e81536b9f.png?v=1774266402",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/4_7b26c03a-c40e-4481-9af7-bf2965458efd.png?v=1774266402",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "double-cross-ring",
+      "titulo": "Double Cross Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 8,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_2.png?v=1774266382",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_3.png?v=1774266382",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_d27db552-2137-4b72-9bea-2c8794a0b8cd.png?v=1774266383",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_3e3f4373-e673-4140-ac1d-ebc03494c6b2.png?v=1774266383",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_f47b319d-df6e-4e95-83d9-f92f700cd4ad.png?v=1774266383",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "dangle-cross-earrings",
+      "titulo": "Dangle Cross Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_4b469fad-2e15-44ac-8232-b00085d49d78.jpg?v=1774266371",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_1_-gigapixel-standardv2-2x_29ac4793-f9e1-443f-a61d-c83dcdf66737.jpg?v=1774266371",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_4f8a34e6-4635-4b22-8309-19a8e9e3973f.png?v=1774266372",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_744701ca-2eb2-4b19-b4cf-70dedc3326f9.png?v=1774266372",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_25188cd0-628f-4c22-96e3-6e983a19428d.png?v=1774266373",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "dainty-cross-necklace",
+      "titulo": "Dainty Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_cf906751-9295-4bc1-8551-e22362551895.jpg?v=1774266360",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_603bcc3c-b5b2-4d5d-be50-bf4629c8e8f6.png?v=1774266361",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_f60a8eaa-2cde-4692-b0e3-cd6126a8b6a8.png?v=1774266362",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_161d1428-411f-462c-b616-e633e47aa0e9.png?v=1774266362",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-4_74c78760-5ff1-45db-b2d7-40306ebb0f64.png?v=1774266364",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "crystal-cross-ring",
+      "titulo": "Crystal Cross Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 10,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_d025e64e-4928-4bf1-bdbd-0bd8df4a1d1a.png?v=1774266357",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_54f113d4-100b-46fe-9279-985186947197.png?v=1774266356",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_3511968e-d4e1-42d2-8aa5-6e6f14370775.png?v=1774266356",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NSProdImages.png?v=1774266356",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_e442e274-a591-4d34-bb7f-b067c4076010.png?v=1774266357",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "crystal-cross-necklace",
+      "titulo": "Crystal Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-Neo_Saints_b6708508-f968-4cc7-be7c-cd963e62a536.png?v=1774266352",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-Neo_Saints_1_1a477576-66de-4f76-94c0-e8a08369c542.png?v=1774266352",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_4e5950af-0236-4d1d-be58-7fada1fa88e6.png?v=1774266352",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_bcfca20c-d8d3-4ed2-9fd6-e6ba0e6e18a4.png?v=1774266353",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-4_bd0bdbe4-e25c-4c04-baec-7b4fa4cbd9ec.png?v=1774266355",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "crucifix-necklace",
+      "titulo": "Crucifix Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1e8875ae-4b5b-4a42-892d-944dc598bcaf.png?v=1774266346",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_a085c0f1-72d5-4a86-b49b-fcb94ce1c035.png?v=1774266346",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_a3343583-140a-460c-b2ef-db0ecde36620.png?v=1774266346",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_987be7e5-9c16-4cd3-a03c-55b3e27c2eaf.png?v=1774266346",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_f8ac4e2b-62aa-4f5e-ba1b-92fc8fda6395.png?v=1774266346",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 8
+    },
+    {
+      "handle": "croissant-hoops",
+      "titulo": "Croissant Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_6f09696d-81b8-49a2-8f86-3b08c5f727bc.png?v=1774266335",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_425d8852-8a56-4441-9b68-a2ff8ab0b818.png?v=1774266335",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_29b2a950-629e-4a04-9f4f-d58b6f7c6f67.png?v=1774266335",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_2b59e531-3802-4328-8f25-06d97d5a2194.png?v=1774266336",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_a52b7e4e-269e-454d-957f-3502f676e5bc.png?v=1774266336",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "covenant-hoops",
+      "titulo": "Covenant Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_a242a60a-e5d2-4621-bbbc-71c514443f55.png?v=1774266330",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_84740d1f-a4ff-4892-bb3e-ee0b1b48ded2.png?v=1774266330",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_a0b65621-84c4-4909-af8f-cbc4ed0878ff.png?v=1774266331",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_1fd9a6a3-7771-45e3-98d1-bdf122e4857b.png?v=1774266331",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_7173d28d-f557-47dc-a9a0-934d43ecf4c8.png?v=1774266332",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 5
+    },
+    {
+      "handle": "core-cross-necklace",
+      "titulo": "Core Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS-gigapixel-standardv2-2x_e37cab1b-1905-4b14-ade5-216c7331797c.jpg?v=1774266324",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_44ea2551-6e61-41ef-8ba1-cdafefb681db.png?v=1774266325",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_9e7e55cb-be6d-462c-8aab-7f38cb91aae3.png?v=1774266325",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_129be038-23a4-4747-b0f0-bb7f7bb072d3.png?v=1774266325",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_0e6f5d6a-6860-4f6c-b97e-ae341ca311ae.png?v=1774266326",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 7
+    },
+    {
+      "handle": "classic-cross-ring",
+      "titulo": "Classic Cross Ring",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 8,
+      "tipo": "Ring",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_d20c5ce8-a076-412d-8b6b-972815a29e11.png?v=1774266319",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_ef8704d2-98fc-4be9-8222-d8302fc029fd.png?v=1774266321",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_2505f115-40d7-4218-80ba-7775e7a54b41.png?v=1774266319",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_83576c3d-b49a-4dc7-848f-191bfbfdedab.png?v=1774266320",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/4_b3335f38-4450-4d41-85fd-44aeb2a2038c.png?v=1774266320",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "classic-cross-necklace",
+      "titulo": "Classic Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_87c0594b-56d5-42fd-a91a-73081b8ac079.png?v=1774266314",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_ea5cbea4-efbe-42a8-a20f-b35825878f57.png?v=1774266314",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/573362237_1506996587201244_3687681848587196098_n.jpg?v=1774266314",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/Untitleddesign.png?v=1774266315",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-4_f5556876-c180-419f-9bc7-275760ba5e61.png?v=1774266320",
+          "width": 1600,
+          "height": 1600
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "classic-cross-hoops",
+      "titulo": "Classic Cross Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_3cf1f81a-3588-405d-82e9-dce52709b6d7.png?v=1774266308",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_1_308b0d79-d4ae-4831-ad12-82bac431c1fd.png?v=1774266309",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_942e942a-88c2-4918-a355-7453743781d6.png?v=1774266309",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_723f4db5-f1bf-4f17-b765-f44c4113ce1b.png?v=1774266309",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_757a3638-0853-4166-ba21-dad7bc1e02f7.png?v=1774266310",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "charm-cross-necklace",
+      "titulo": "Charm Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 1,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_cc44f08e-15ba-4233-8ab0-6c127550b44d.png?v=1774266298",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/6_05719d0b-15bc-40b5-bba6-e6a0a9d6030e.png?v=1774266298",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_9a8a811f-1e8d-47d7-b4be-4ffdadc59c7f.png?v=1774266298",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/3_cfdcf90c-3cb8-4802-87df-74a6754045fd.png?v=1774266299",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/NS_c17b3898-9103-4171-97d2-8205b8997ca1.png?v=1774266299",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "blessed-hoops",
+      "titulo": "Blessed Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_cefc4e27-f088-40a4-acc5-23961f160a9a.png?v=1774266294",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/gigapixel-NS_a6e61ebc-26c9-4a5c-beae-3b7b7c301e82.png?v=1774266294",
+          "width": 1600,
+          "height": 1600
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/1_6707976d-7bf6-46b6-b61c-e12d2d50b5ed.png?v=1774266295",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/2_2cee9c36-5f97-42c1-84ae-b3a4cb56d396.png?v=1774266295",
+          "width": 800,
+          "height": 800
+        }
+      ],
+      "imagens_total": 4
+    },
+    {
+      "handle": "medallion-cross-necklace",
+      "titulo": "Medallion Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 3,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroMedallionNecklace.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleMedallionNecklace30YO.webp?v=1790205731",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceMedallionNecklace.webp?v=1790190932",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleBlueMedallionNecklace30YO.webp?v=1790205731",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceBlueMedallionNecklace.webp?v=1790190932",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 8
+    },
+    {
+      "handle": "crown-cross-earrings",
+      "titulo": "Crown Cross Earrings",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Earrings",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroCrownEarrings.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleCrownEarrings30YO.webp?v=1790204000",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverCrownEarrings30YO.webp?v=1790204000",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 3
+    },
+    {
+      "handle": "eternal-cross-necklace",
+      "titulo": "Eternal Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroEternalNecklace.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleEternalNecklace.webp?v=1790704353",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceEternalNecklace.webp?v=1790704353",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverEternalNecklace.webp?v=1790704354",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverEternalNecklace.webp?v=1790704353",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "pearl-cross-bracelet",
+      "titulo": "Pearl Cross Bracelet",
+      "preco_minimo": 29.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Bracelet",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroPearlBracelet.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestylePearlBracelet30YO.webp?v=1790203963",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfacePearlBracelet.webp?v=1790190854",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverPearlBracelet.webp?v=1794225893",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverPearlBracelet.webp?v=1794225893",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "cross-pearls-necklace",
+      "titulo": "Pearl Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroPearlNecklace.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestylePearlNecklace30YO.webp?v=1790203802",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfacePearlNecklace.webp?v=1790191300",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverPearlNecklace.webp?v=1794225882",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverPearlNecklace.webp?v=1794227352",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "statement-cross-necklace",
+      "titulo": "Statement Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 2,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroStatementNecklace.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleStatementNecklace30YO.webp?v=1790204053",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceStatementNecklace.webp?v=1790191236",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverStatementNecklace30YO.webp?v=1790204054",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverStatementNecklace.webp?v=1790191236",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 6
+    },
+    {
+      "handle": "cross-crown-necklace",
+      "titulo": "Crown Cross Necklace",
+      "preco_minimo": 39.99,
+      "preco_comparado": null,
+      "variantes": 3,
+      "tipo": "Necklace",
+      "fisico": true,
+      "imagens": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/HeroCrownNecklace_530add7f-cbda-43b0-83ba-7ecceb26cbde.webp?v=1793208760",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleCrownNecklace30YO.webp?v=1790203764",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceCrownNecklace_6b31a4a1-f753-457c-ba54-135f5d27a11b.webp?v=1790191362",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/LifestyleSilverCrownNecklace30YO.webp?v=1790203764",
+          "width": 2048,
+          "height": 2048
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0930/1858/7481/files/SurfaceSilverCrownNecklace_bfa721a9-2e34-4ee5-9f24-fa081a949128.webp?v=1790191362",
+          "width": 2048,
+          "height": 2048
+        }
+      ],
+      "imagens_total": 8
+    }
+  ],
+  "catalogo_truncado": false,
+  "colecoes": [],
+  "politicas": {},
+  "robots_bloqueia_products": false,
+  "observacoes": [
+    "HTTP 429 em /products/welcome-gift-box; coleta interrompida sem nova tentativa"
+  ],
+  "coletado_em": "2026-11-15T16:05:38.398Z"
+}
